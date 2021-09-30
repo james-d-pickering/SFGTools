@@ -1,0 +1,2159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>890</width>
+    <height>815</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="experimental_params">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>261</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Experimental Parameters</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>18</y>
+       <width>241</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="calibrate_offset_box">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Offset to apply to the spectrum energy axis. </string>
+        </property>
+        <property name="statusTip">
+         <string>Offset to apply to the spectrum energy axis. </string>
+        </property>
+        <property name="whatsThis">
+         <string>Offset to apply to the spectrum energy axis in wavenumbers.</string>
+        </property>
+        <property name="placeholderText">
+         <string>Offset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="upconversion_line_dropdown">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Wavelength of the upconverter (vis) beam.</string>
+        </property>
+        <property name="statusTip">
+         <string>Wavelength of the upconverter (vis) beam.</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>800</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>515</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>804</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>808</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="upconvert_label">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Upconversion Line</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="calibrate_offset_label">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Calibration Offset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="calibrate_offset_unit_label">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>cm-1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>nm</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="data_input_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>261</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>1</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Data Input</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>271</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Directory where data files are stored.</string>
+     </property>
+     <property name="statusTip">
+      <string>Directory where data files are stored.</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="widget">
+      <attribute name="title">
+       <string>Smart</string>
+      </attribute>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>241</width>
+         <height>84</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="ref_string_box">
+          <property name="toolTip">
+           <string>String used to identify reference data files.</string>
+          </property>
+          <property name="statusTip">
+           <string>String used to identify reference data files.</string>
+          </property>
+          <property name="whatsThis">
+           <string>The smart file reader will identify any file that contains this string as a reference file.</string>
+          </property>
+          <property name="placeholderText">
+           <string>Reference String</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="sample_string_box">
+          <property name="toolTip">
+           <string>String used to identify signal data files.</string>
+          </property>
+          <property name="statusTip">
+           <string>String used to identify signal data files. </string>
+          </property>
+          <property name="whatsThis">
+           <string>The smart file reader will identify any file that contains this string as a signal file.</string>
+          </property>
+          <property name="placeholderText">
+           <string>Sample String</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="get_data_button">
+          <property name="toolTip">
+           <string>Run the smart data input to load files.</string>
+          </property>
+          <property name="statusTip">
+           <string>Run the smart data input to load files.</string>
+          </property>
+          <property name="whatsThis">
+           <string>This will trawl through the selected directory and read in signal, background, and reference files. If auto sort is checked then they will be automatically sorted and matched.</string>
+          </property>
+          <property name="text">
+           <string>Get Data</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="browse_data_directory">
+          <property name="toolTip">
+           <string>Browse for data directory.</string>
+          </property>
+          <property name="statusTip">
+           <string>Browse for data directory.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Click here to open a file browser where the directory containing data can be navigated to and selected.</string>
+          </property>
+          <property name="text">
+           <string>Select Directory</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="bg_string_box">
+          <property name="toolTip">
+           <string>String used to identify background files.</string>
+          </property>
+          <property name="statusTip">
+           <string>String used to identify background files.</string>
+          </property>
+          <property name="whatsThis">
+           <string>The smart file reader will identify any file that contains this string as a background file.</string>
+          </property>
+          <property name="text">
+           <string>_bg</string>
+          </property>
+          <property name="placeholderText">
+           <string>Background Identifier</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCheckBox" name="auto_sort_checkbox">
+          <property name="toolTip">
+           <string>Sort and match data when &quot;Get Data&quot; is pressed.</string>
+          </property>
+          <property name="statusTip">
+           <string>Sort and match data when &quot;Get Data&quot; is pressed.</string>
+          </property>
+          <property name="whatsThis">
+           <string>If checked, the files loaded by the smart reader will be automatically sorted and matched. Equivalent to loading manually and clicking &quot;Auto Sort&quot; in file manager.</string>
+          </property>
+          <property name="text">
+           <string>Auto Sort?</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Manual</string>
+      </attribute>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>234</width>
+         <height>86</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="0">
+         <widget class="QPushButton" name="browse_ref_files">
+          <property name="toolTip">
+           <string>Load reference data files.</string>
+          </property>
+          <property name="statusTip">
+           <string>Load reference data files. </string>
+          </property>
+          <property name="whatsThis">
+           <string>Opens a file dialog to load reference data files.</string>
+          </property>
+          <property name="text">
+           <string>Reference Files</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="browse_signal_files">
+          <property name="toolTip">
+           <string>Load signal data files.</string>
+          </property>
+          <property name="statusTip">
+           <string>Load signal data files.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Open a file dialog to load signal data files.</string>
+          </property>
+          <property name="text">
+           <string>Signal Files</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="browse_background_files">
+          <property name="toolTip">
+           <string>Load background files.</string>
+          </property>
+          <property name="statusTip">
+           <string>Load background files.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Open a file dialog to load background files.</string>
+          </property>
+          <property name="text">
+           <string>Sig Backgrounds</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="browse_ref_bg_files">
+          <property name="toolTip">
+           <string>Load reference background files.</string>
+          </property>
+          <property name="statusTip">
+           <string>Load reference background files.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Opens a file dialog to load reference background files. </string>
+          </property>
+          <property name="text">
+           <string>Ref Backgrounds</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="data_processing">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>261</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Data Processing</string>
+    </property>
+    <widget class="QTabWidget" name="processing_tab">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="general_processing">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>221</width>
+         <height>238</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0" colspan="2">
+         <widget class="QCheckBox" name="subtract_checkbox">
+          <property name="toolTip">
+           <string>Subtract background spectrum.</string>
+          </property>
+          <property name="statusTip">
+           <string>Subtract background spectrum.</string>
+          </property>
+          <property name="text">
+           <string>Subtract Background?</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="cosmic_width_label">
+          <property name="text">
+           <string>Cosmic Width</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="2">
+         <widget class="QCheckBox" name="calibrate_checkbox">
+          <property name="toolTip">
+           <string>Shift energy axis of spectrum by +calibration offset.</string>
+          </property>
+          <property name="statusTip">
+           <string>Shift energy axis of spectrum by +calibration offset.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Applies a calibration shift of +calibration offset to spectra during processing.</string>
+          </property>
+          <property name="text">
+           <string>Calibrate Spectra?</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QCheckBox" name="downconvert_checkbox">
+          <property name="toolTip">
+           <string>Subtract upconversion energy from energy axis.</string>
+          </property>
+          <property name="statusTip">
+           <string>Subtract upconversion energy from energy axis.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Downconversion</string>
+          </property>
+          <property name="text">
+           <string>Downconvert Spectrum?</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="cosmic_threshold_label">
+          <property name="text">
+           <string>Cosmic Threshold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QCheckBox" name="exposure_checkbox">
+          <property name="toolTip">
+           <string>Divide out exposure time from .spe file.</string>
+          </property>
+          <property name="statusTip">
+           <string>Divide out exposure time from .spe file.</string>
+          </property>
+          <property name="text">
+           <string>Divide Exposure Time?</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QCheckBox" name="normalise_checkbox">
+          <property name="toolTip">
+           <string>Divide by reference spectrum.</string>
+          </property>
+          <property name="statusTip">
+           <string>Divide by reference spectrum.</string>
+          </property>
+          <property name="text">
+           <string>Normalise to Reference?</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QCheckBox" name="killcosmic_checkbox">
+          <property name="toolTip">
+           <string>Programmatically remove cosmic rays.</string>
+          </property>
+          <property name="statusTip">
+           <string>Programmatically remove cosmic rays.</string>
+          </property>
+          <property name="text">
+           <string>Kill Cosmic Rays?</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="cosmic_threshold_box">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>The height that a spectral feature needs to be above the baseline to be considered for cosmic ray removal.</string>
+          </property>
+          <property name="statusTip">
+           <string>The height that a spectral feature needs to be above the baseline to be considered for cosmic ray removal.</string>
+          </property>
+          <property name="whatsThis">
+           <string>The height that a spectral feature needs to be above the baseline to be considered for cosmic ray removal.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Default: 0.01</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="cosmic_width_box">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>The maximum width (in pixels) for a spectral feature to be considered a cosmic ray - if it is wider than this it is presumed to be real.</string>
+          </property>
+          <property name="statusTip">
+           <string>The maximum width (in pixels) for a spectral feature to be considered a cosmic ray - if it is wider than this it is presumed to be real.</string>
+          </property>
+          <property name="whatsThis">
+           <string>The maximum width (in pixels) for a spectral feature to be considered a cosmic ray - if it is wider than this it is presumed to be real.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Default: 5</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="output">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>261</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Output</string>
+    </property>
+    <widget class="QTabWidget" name="output_tab">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>231</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="OutputOptions">
+      <attribute name="title">
+       <string>Output Options</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>221</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="close_plots_checkbox">
+          <property name="toolTip">
+           <string>Close currently open plots on next run.</string>
+          </property>
+          <property name="statusTip">
+           <string>Close currently open plots on next run.</string>
+          </property>
+          <property name="whatsThis">
+           <string>If checked then currently open matplotlib figures will be closed when the program is next run.</string>
+          </property>
+          <property name="text">
+           <string>Close Plots?</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="stack_plots_checkbox">
+          <property name="toolTip">
+           <string>Plot data from currently loaded files on one figure.</string>
+          </property>
+          <property name="statusTip">
+           <string>Plot data from currently loaded files on one figure.</string>
+          </property>
+          <property name="whatsThis">
+           <string>If checked then all the data from the currently loaded files will be plotted on one figure, useful for comparisons. </string>
+          </property>
+          <property name="text">
+           <string>Stack Plots?</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="custom_region_start_textbox">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Start of region to be plotted in wavenumbers.</string>
+          </property>
+          <property name="statusTip">
+           <string>Start of region to be plotted in wavenumbers.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Start of region to be plotted, data is masked to between start and end, and autoscaled after masking.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QLabel" name="region_label">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Region of Interest (in cm&lt;sup&gt;-1&lt;/sup&gt;)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="custom_region_end_textbox">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>End of region to be plotted in wavenumbers.</string>
+          </property>
+          <property name="statusTip">
+           <string>End of region to be plotted in wavenumbers.</string>
+          </property>
+          <property name="whatsThis">
+           <string>End of region to be plotted, data is masked to between start and end, and autoscaled after masking.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>End</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="browse_write_directory">
+          <property name="toolTip">
+           <string>Browse for write directory.</string>
+          </property>
+          <property name="statusTip">
+           <string>Browse for write directory.</string>
+          </property>
+          <property name="whatsThis">
+           <string>Opens a dialog where the write directory can be selected.</string>
+          </property>
+          <property name="text">
+           <string>Browse..</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="write_directory_box">
+          <property name="toolTip">
+           <string>Directory where data will be written.</string>
+          </property>
+          <property name="statusTip">
+           <string>Directory where data will be written.</string>
+          </property>
+          <property name="whatsThis">
+           <string>The directory where output txt data will be written.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Write Directory</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>221</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QCheckBox" name="plot_data_checkbox">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Plot data using matplotlib.</string>
+        </property>
+        <property name="statusTip">
+         <string>Plot data using matplotlib.</string>
+        </property>
+        <property name="whatsThis">
+         <string>If checked then the data from each signal file is plotted using matplotlib.</string>
+        </property>
+        <property name="text">
+         <string>Plot Data?</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="write_file_checkbox">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Write data to a .txt file.</string>
+        </property>
+        <property name="statusTip">
+         <string>Write data to a .txt file.</string>
+        </property>
+        <property name="whatsThis">
+         <string>If checked then processed data from each signal file is written to a .txt file</string>
+        </property>
+        <property name="text">
+         <string>Write to File Output?</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>540</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Press me to process data!</string>
+    </property>
+    <property name="statusTip">
+     <string>Process data.</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Go!</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>390</y>
+      <width>261</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Program Options</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_7">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="verbose_check">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Enter verbose mode.</string>
+        </property>
+        <property name="statusTip">
+         <string>Enter verbose mode.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Prints detail to the terminal. </string>
+        </property>
+        <property name="text">
+         <string>Verbose?</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="stupid_verbose_check">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Enter stupidly verbose mode.</string>
+        </property>
+        <property name="statusTip">
+         <string>Enter stupidly verbose mode.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Prints ludicrous detail to the terminal.</string>
+        </property>
+        <property name="text">
+         <string>Stupidly Verbose?</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="restore_default_button">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default behaviour is that user inputs are persistent between runs - click this will clear them and restore defaults. Requires restart of program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="statusTip">
+         <string>Clear persistent user inputs.</string>
+        </property>
+        <property name="text">
+         <string>Restore Defaults</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="quit_button">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Quit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>70</y>
+      <width>321</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>File Manager</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>301</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Reference Files</string>
+     </property>
+     <widget class="QTableView" name="referenceTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>281</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>301</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Data Files</string>
+     </property>
+     <widget class="QTableView" name="dataTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>281</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="browse_data_directory_2">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Browse for data directory.</string>
+        </property>
+        <property name="statusTip">
+         <string>Browse for data directory.</string>
+        </property>
+        <property name="text">
+         <string>Browse..</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="test_button">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Print the files to be processed as a list to the terminal.</string>
+        </property>
+        <property name="statusTip">
+         <string>Print the files to be processed as a list to the terminal.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Print the files to be processed as a list to the terminal.</string>
+        </property>
+        <property name="text">
+         <string>Check Files</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="data_directory_box">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Directory where the data files are located.</string>
+        </property>
+        <property name="placeholderText">
+         <string>Data Directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="auto_sort_button">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Sort and match loaded data.</string>
+        </property>
+        <property name="statusTip">
+         <string>Sort and match loaded data.</string>
+        </property>
+        <property name="text">
+         <string>Auto Sort</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>831</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_9">
+     <item row="0" column="0">
+      <widget class="QLabel" name="title_label">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>SFGTools GUI - v1.0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help Me</string>
+   </property>
+   <property name="toolTip">
+    <string>Enter Help Mode</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>data_directory_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>data_directorySlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>717</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>detonateSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>430</x>
+     <y>588</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upconversion_line_dropdown</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>upconversion_line_dropdownSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>write_file_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>write_file_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>249</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>586</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sample_string_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sample_stringSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_data_directory</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_directorySlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>verbose_check</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>verboseSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>454</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>581</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ref_string_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ref_stringSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>109</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calibrate_offset_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>calibrate_offsetSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>549</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calibrate_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>calibrate_offset_box</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>376</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calibrate_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>calibrate_offset_label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>425</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calibrate_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>calibrate_offset_unit_label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>445</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subtract_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>subtract_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>425</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downconvert_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>downconvert_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>normalise_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>normalise_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>453</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>killcosmic_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cosmic_threshold_box</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>killcosmic_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cosmic_kill_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>361</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exposure_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>exposure_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>killcosmic_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cosmic_threshold_box</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>506</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>killcosmic_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cosmic_width_box</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downconvert_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>upconversion_line_dropdown</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>324</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>killcosmic_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cosmic_width_label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>normalise_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>ref_string_box</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>436</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cosmic_width_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cosmic_widthSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>443</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calibrate_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>calibrate_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>518</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cosmic_threshold_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cosmic_thresholdSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downconvert_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>upconvert_label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>451</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>killcosmic_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cosmic_threshold_label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plot_data_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>plot_data_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>restore_default_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>clear_persistent_settingsSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>481</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>614</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_signal_files</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_signal_filesSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_background_files</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_background_filesSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_ref_files</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_reference_filesSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>53</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_ref_bg_files</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_reference_background_filesSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>auto_sort_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>auto_sortSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>608</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>660</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>test_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>testSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>771</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>get_data_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>get_dataSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>37</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_data_directory_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_directorySlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>582</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>788</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bg_string_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>bg_string_boxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subtract_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>browse_background_files</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>160</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subtract_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>browse_ref_bg_files</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>196</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>normalise_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>browse_ref_files</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subtract_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>bg_string_box</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>234</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>normalise_checkbox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>browse_ref_bg_files</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stupid_verbose_check</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stupid_verboseSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>458</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>custom_region_end_textbox</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>custom_region_end_textboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>174</x>
+     <y>413</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>custom_region_start_textbox</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>custom_region_start_textboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>close_plots_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close_plotsSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>481</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>612</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stack_plots_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stack_plots_checkboxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>478</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>quit_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>quit_Slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>492</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>296</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>auto_sort_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>auto_sort_checkSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browse_write_directory</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>browse_write_directorySlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>677</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>write_directory_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>write_directory_boxSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>706</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>browse_signal_filesSlot()</slot>
+  <slot>signal_files_inputSlot()</slot>
+  <slot>browse_background_filesSlot()</slot>
+  <slot>background_files_inputSlot()</slot>
+  <slot>input_filetype_dropdownSlot()</slot>
+  <slot>signal_textboxSlot()</slot>
+  <slot>upconversion_line_dropdownSlot()</slot>
+  <slot>upconversion_unit_dropdownSlot()</slot>
+  <slot>region_dropdownSlot()</slot>
+  <slot>custom_region_start_textboxSlot()</slot>
+  <slot>custom_region_end_textboxSlot()</slot>
+  <slot>polarisations_dropdownSlot()</slot>
+  <slot>exposure_time_textboxSlot()</slot>
+  <slot>exposure_unit_dropdownSlot()</slot>
+  <slot>reference_files_textboxSlot()</slot>
+  <slot>reference_background_files_textboxSlot()</slot>
+  <slot>browse_reference_filesSlot()</slot>
+  <slot>browse_reference_background_filesSlot()</slot>
+  <slot>input_ref_dropdownSlot()</slot>
+  <slot>ref_material_dropdownSlot()</slot>
+  <slot>xaxis_unit_dropdownSlot()</slot>
+  <slot>downconvert_checkboxSlot()</slot>
+  <slot>subtract_checkboxSlot()</slot>
+  <slot>normalise_checkboxSlot()</slot>
+  <slot>exposure_checkboxSlot()</slot>
+  <slot>show_plots_checkboxSlot()</slot>
+  <slot>plot_data_checkboxSlot()</slot>
+  <slot>write_file_checkboxSlot()</slot>
+  <slot>save_plots_checkboxSlot()</slot>
+  <slot>output_plot_type_dropdownSlot()</slot>
+  <slot>output_plot_dpi_dropdownSlot()</slot>
+  <slot>process_dataSlot()</slot>
+  <slot>verboseSlot()</slot>
+  <slot>data_directorySlot()</slot>
+  <slot>sample_stringSlot()</slot>
+  <slot>ref_stringSlot()</slot>
+  <slot>browse_directorySlot()</slot>
+  <slot>cosmic_kill_checkboxSlot()</slot>
+  <slot>confused_inputSlot()</slot>
+  <slot>cosmic_thresholdSlot()</slot>
+  <slot>cosmic_widthSlot()</slot>
+  <slot>calibrate_checkboxSlot()</slot>
+  <slot>calibrate_offsetSlot()</slot>
+  <slot>average_spectraSlot()</slot>
+  <slot>clear_persistent_settingsSlot()</slot>
+  <slot>close_plotsSlot()</slot>
+  <slot>auto_sortSlot()</slot>
+  <slot>testSlot()</slot>
+  <slot>get_dataSlot()</slot>
+  <slot>detonateSlot()</slot>
+  <slot>bg_string_boxSlot()</slot>
+  <slot>stack_plots_checkboxSlot()</slot>
+  <slot>write_directory_boxSlot()</slot>
+  <slot>browse_write_directorySlot()</slot>
+  <slot>stupid_verboseSlot()</slot>
+  <slot>quit_Slot()</slot>
+  <slot>auto_sort_checkSlot()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,3 @@
+cd C:
+cd .\Users\au538552\Anaconda3\Library\bin\
+.\pyuic5 (path to ui file.ui) -o (path to output file.py)
