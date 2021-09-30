@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>Using SFGTools with a GUI &#8212; SFGTools 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using SFGTools with a GUI</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="using-sfgtools-with-a-gui">
+<h1>Using SFGTools with a GUI<a class="headerlink" href="#using-sfgtools-with-a-gui" title="Permalink to this headline">¶</a></h1>
+<p>Also provided with the <strong>SFGTools</strong> module is a graphical user interface to make doing the most common data processing simple and efficient. The GUI can be run (if you have Python and the right packages installed) from the a UNIX shell or Windows Powershell, after navigating to the directory containing <em>SFGToolsGUI.py</em> simply by running the file with your Python interpreter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">SFGToolsGUI</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>You should now see a GUI window open on your screen. If you don’t, it is probably due to you not having Python or the relevant dependencies installed - a standalone <em>.exe</em> version of the GUI is coming very soon. The SFGTools GUI works simply by implementing the functions defined in the <em>sfgtools.py</em> module but takes user input of the files and processing flags from the GUI window. Lets take a tour of the GUI panel.</p>
+<p>Examining panels clockwise from the top left, we have:
+* <strong>Data Input</strong> - this panel contains two tabs that give two options for data input. A ‘smart’ reader (efficient if your filenaming is consistent and as the program expects - see later), and a ‘manual’ reader (a bit more labour intensive).
+* <strong>Data Processing</strong> - this panel is where options related to the data processing can be selected, currently it holds checkboxes that relate to all the bool flags that determine how the data is processed.
+* <strong>File Manager</strong> - this panel contains two tables that will show the loaded data files (top table is for signal data, bottom is for reference data).
+* <strong>Program Options</strong> - this panel contains options that relate to the running of the GUI.
+* <strong>Output</strong> - this panel contains settings that determine how and where the program outputs processed data.
+* <strong>Experimental Parameters</strong> - this panel contains parameters that are specific to the experiment but affect the data processing.</p>
+<p>Use of the GUI once you have loaded the data files is pretty straightforward, just click the checkboxes you want and hit “Go!” to process and plot/write the data. The slightly complex part comes in understanding the file input methods. Using the example files in <em>/examples/GUI/</em> we can illustrate this.</p>
+<p>There are two ways that data files can be loaded into the SFGToolsGUI - <strong>smart</strong>, and <strong>manual</strong>. The <strong>smart</strong> method works best if your data conform to a (somewhat flexible) naming format, and is helpful if you need to process large amounts of data at once. The <strong>manual</strong> method is slightly more labour intensive. Recall that the processing in <em>SFGTools</em> is centered around defining <strong>signal</strong>, <strong>background</strong>, <strong>reference</strong>, and <strong>reference background</strong> data files, which are then loaded into a datastore and processed.</p>
+<section id="using-the-smart-file-reader">
+<h2>Using the Smart File Reader<a class="headerlink" href="#using-the-smart-file-reader" title="Permalink to this headline">¶</a></h2>
+<p>The first thing to do when using either file reader is to select the <strong>data directory</strong> that you want to read the files from. As of the current version, all the files to be read must be in the same folder (otherwise use the module in a Python script to get more flexibility). This is done either using the <em>select directory</em> button on the Data Input panel, or the <em>Browse…</em> button on the File Manager panel. Both point to the same slot in the underlying program, and will open a file dialog that allows you navigate and select a folder. Select the <em>/examples/GUI/</em> folder now.</p>
+<p>If it was not already so, the <em>Data Directory</em> field in File Manager should now be filled in with the correct directory. Now, we have to provide three strings to the smart data reader so that it can get our data:
+* <strong>Sample String</strong> - this string must be at the start of your filename, and is what identifies it as the correct type of data file to plot (for example - you may have recorded several different samples on one day, but only want to plot one at a time).
+* <strong>Reference String</strong> - this string must be at the start of the filename of any reference files, and identifies them as a reference.
+* <strong>Bg String</strong> - this string is what identifies a file as a background file, and can be present anywhere in the filename.</p>
+<p>Some of these fields may already be filled in depending on the settings when the GUI was last run on your system. Set the sample string to ‘sample’, the reference to ‘reference’, and the background to ‘_bg’. When the fields are filled in and the <em>Get Data</em> button is pressed, then the program will look in the specified directory and find the relevant files. Try this now. You should see files that have been loaded in the File Manager panel - four in total.</p>
+<p>It is perhaps useful to illustrate how this method would work with a more complex filename. Imagine that we have the following six files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LkA_SSP_3000nm_1</span><span class="o">.</span><span class="n">spe</span>
+<span class="n">LkA_SSP_3000nm_2</span><span class="o">.</span><span class="n">spe</span>
+<span class="n">LkA_SSP_3000nm_3</span><span class="o">.</span><span class="n">spe</span>
+<span class="n">LkA_SSP_3000nm_bg</span><span class="o">.</span><span class="n">spe</span>
+<span class="n">Au_PPP_1</span><span class="o">.</span><span class="n">spe</span>
+<span class="n">Au_PPP_bg</span><span class="o">.</span><span class="n">spe</span>
+</pre></div>
+</div>
+<p>In our fictional experiment, our sample is ‘LkA’, and our reference is ‘Au’ (classic SFG). The smart file reader would identify the top three files as signal files, the fourth file as a background to the signal files, the fifth file as a reference file, and the sixth file as a background to the reference file. The reader is quite capable, but please try and break it so it can be improved!</p>
+<p>Now our files are loaded, but we need to <strong>sort</strong> the files before they can be processed. For the example case, this is not strictly necessary, but if we have multiple signal files that share a background or reference, or multiple references, then this is important. Clicking the <em>Auto Sort</em> button in File Manager will attempt to match each signal file with it’s correct background and reference files (see module documentation for more explanation). Of course, if it doesn’t do this correctly (or you have some inconsistent naming), you can manually edit the generated data tables and it will update the data to be processed.</p>
+<p>Having got and sorted the data, you can now ensure that the <em>Plot Data</em> checkbox is ticked and plot the data.</p>
+</section>
+<section id="using-the-manual-file-reader">
+<h2>Using the Manual File Reader<a class="headerlink" href="#using-the-manual-file-reader" title="Permalink to this headline">¶</a></h2>
+<p>The manual file reader is simpler to understand but more clunky to use. Changing the tab from <em>smart</em> to <em>manual</em> you will see that there are now four buttons labelled with the four filetypes we need for our data processing. Again, the first thing to do is to ensure the correct directory is selected.</p>
+<p>Once that is done, clicking each of the four buttons will bring up a file dialog where data files can be selected. The files you select in the dialog that arises from the <em>Signal Files</em> button will be stored as signal files, and so on. Once you have done this for all four buttons you will see that the tables are populated - then you can either sort out the backgrounds/references manually, or you can use the Auto Sort function again.</p>
+<p>Try to use the Manual file reader now with the files in the <em>/examples/GUI/</em> folder. You should find it gives the same result as the smart reader.</p>
+<section id="a-note-on-references">
+<h3>A note on references<a class="headerlink" href="#a-note-on-references" title="Permalink to this headline">¶</a></h3>
+<p>You will note that the reference and signal tables are separate, and that references are created with a number (the <strong>refID</strong>) next to them. Most of the time in SFG, there are many more signal files than reference files, so you may only have two or three reference files loaded that provide the references for tens of different signal files. You can see which reference files are associated with each reference after sorting by comparing the numbers in the final column of each table - it is fairly self explanatory.</p>
+</section>
+<section id="don-t-trust-my-sorting-function">
+<h3>Don’t trust my sorting function?<a class="headerlink" href="#don-t-trust-my-sorting-function" title="Permalink to this headline">¶</a></h3>
+<p>Sensible skepticism. Before processing, but after the files are loaded and sorted, you can press the <em>Check Files</em> button, and this will print a table of files to the shell. The four columns of this table are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">signal_files</span><span class="p">,</span> <span class="n">background_files</span><span class="p">,</span> <span class="n">reference_files</span><span class="p">,</span> <span class="n">reference_bg_files</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Each row represents a different signal file, and the files in the same row are all stored in the same <code class="docutils literal notranslate"><span class="pre">SFGDataStore</span></code> instance, and thus are processed together - i.e. the background file in the same row as the signal file is the background for that signal, and so on. In this way you can check what processing is actually going to happen before you hit <em>Go</em> and potentially generate hundreds of meaningless spectra. Again, note that if the sorting function does not work for you, you can manually edit the table. But let me know if you find bugs.</p>
+</section>
+</section>
+<section id="processing-options">
+<h2>Processing Options<a class="headerlink" href="#processing-options" title="Permalink to this headline">¶</a></h2>
+<p>Once the files are loaded, I think it is quite self explanatory how the processing checkboxes work. Simply select or deselect the ones you want. Note that if you have a spectrum you want to plot without a background/reference, then just deselect these and the program will not get angry about there not being a loaded background/reference. If it expects there to be a file and one is not provided, you only have yourself to blame for the crash to desktop.</p>
+<p>You also need to input the upconversion wavelength in the appropriate box - in <strong>nanometres</strong>. The calibration offset must be provided in <strong>wavenumbers</strong>.</p>
+<p>The cosmic ray remover is a function implemented by Steven and I, but has not been thoroughly tested and is not the most robust thing. Try it if needed and see - but future versions will have more functionality in this area. In the same vein, a polynomial calibration will be coming soon.</p>
+</section>
+<section id="data-output">
+<h2>Data Output<a class="headerlink" href="#data-output" title="Permalink to this headline">¶</a></h2>
+<p>In terms of data output, the options are to plot the data using matplotlib, write it to a <em>.txt</em> file, or both. If the data are plotted, there are some limited options:
+* <strong>Stack Plots</strong> - will overlay the data from all loaded signal files on a single figure.
+* <strong>Close Plots</strong> - will close any open plots the next time <em>Go!</em> is pressed.
+* <strong>Region of Interest</strong> - these two textboxes define the start and end of the region to be plotted, in <strong>wavenumbers</strong>. Often you want to ignore all the noise at the edges due to normalisation, and this does that.</p>
+<p>If the data are written to a <em>.txt</em> file, they are written to the directory specified in the <em>Write Directory</em> box, which can be selected using the <em>Browse</em> button next to it. The data are written to a file with the same name as the signal file, but with an appended string showing they have been processed. The files written are relatively chunky, as there is a header that records a large amount of the processing options that were used (for future reference), and also many parts of the raw data are written out, not just the final processed output - this is for possible future reference. The first two columns of this file contain the final processed spectral data (xaxis, yaxis).</p>
+</section>
+<section id="miscellaneous-notes">
+<h2>Miscellaneous Notes<a class="headerlink" href="#miscellaneous-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The current version of this GUI is only going to give reliable results when processing <strong>one dimensional</strong> spectral data. Use the module in a Python script for more complex cases.</p></li>
+<li><p>There are some program options to do with verbosity that can be selected - this just changes what is printed to terminal during processing.</p></li>
+<li><p>After each run, the program will store the last used parameters internally and save them on closing, so that when the program is reinitialised on your machine, your previous settings will be reloaded. The <em>Restore Defaults</em> button clears this memory, so an empty GUI will be loaded on the next startup.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Using SFGTools with a GUI</a><ul>
+<li><a class="reference internal" href="#using-the-smart-file-reader">Using the Smart File Reader</a></li>
+<li><a class="reference internal" href="#using-the-manual-file-reader">Using the Manual File Reader</a><ul>
+<li><a class="reference internal" href="#a-note-on-references">A note on references</a></li>
+<li><a class="reference internal" href="#don-t-trust-my-sorting-function">Don’t trust my sorting function?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processing-options">Processing Options</a></li>
+<li><a class="reference internal" href="#data-output">Data Output</a></li>
+<li><a class="reference internal" href="#miscellaneous-notes">Miscellaneous Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/using_GUI.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using SFGTools with a GUI</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, jdpicks.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+    </div>
+  </body>
+</html>

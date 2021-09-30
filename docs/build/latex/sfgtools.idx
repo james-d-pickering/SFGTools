@@ -1,0 +1,195 @@
+\indexentry{module@\spxentry{module}!SFGToolsGUI@\spxentry{SFGToolsGUI}|hyperpage}{8}
+\indexentry{SFGToolsGUI@\spxentry{SFGToolsGUI}!module@\spxentry{module}|hyperpage}{8}
+\indexentry{ItemDelegate (class in SFGToolsGUI)@\spxentry{ItemDelegate}\spxextra{class in SFGToolsGUI}|hyperpage}{8}
+\indexentry{createEditor() (SFGToolsGUI.ItemDelegate method)@\spxentry{createEditor()}\spxextra{SFGToolsGUI.ItemDelegate method}|hyperpage}{8}
+\indexentry{editingfinished (SFGToolsGUI.ItemDelegate attribute)@\spxentry{editingfinished}\spxextra{SFGToolsGUI.ItemDelegate attribute}|hyperpage}{8}
+\indexentry{editingstarted (SFGToolsGUI.ItemDelegate attribute)@\spxentry{editingstarted}\spxextra{SFGToolsGUI.ItemDelegate attribute}|hyperpage}{8}
+\indexentry{MainWindowUIClass (class in SFGToolsGUI)@\spxentry{MainWindowUIClass}\spxextra{class in SFGToolsGUI}|hyperpage}{8}
+\indexentry{auto\_sortSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{auto\_sortSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{auto\_sort\_checkSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{auto\_sort\_checkSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{bg\_string\_boxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{bg\_string\_boxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{browse\_background\_filesSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{browse\_background\_filesSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{browse\_directorySlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{browse\_directorySlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{browse\_reference\_background\_filesSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{browse\_reference\_background\_filesSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{browse\_reference\_filesSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{browse\_reference\_filesSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{browse\_signal\_filesSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{browse\_signal\_filesSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{browse\_write\_directorySlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{browse\_write\_directorySlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{calibrate\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{calibrate\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{calibrate\_offsetSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{calibrate\_offsetSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{clear\_persistent\_settingsSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{clear\_persistent\_settingsSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{close\_plotsSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{close\_plotsSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{cosmic\_kill\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{cosmic\_kill\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{cosmic\_thresholdSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{cosmic\_thresholdSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{cosmic\_widthSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{cosmic\_widthSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{custom\_region\_end\_textboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{custom\_region\_end\_textboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{custom\_region\_start\_textboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{custom\_region\_start\_textboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{data\_directorySlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{data\_directorySlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{detonateSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{detonateSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{downconvert\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{downconvert\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{editSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{editSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{exposure\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{exposure\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{get\_dataSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{get\_dataSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{8}
+\indexentry{normalise\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{normalise\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{plot\_data\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{plot\_data\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{quit\_Slot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{quit\_Slot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{ref\_stringSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{ref\_stringSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{sample\_stringSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{sample\_stringSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{setupUi() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{setupUi()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{stack\_plots\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{stack\_plots\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{stupid\_verboseSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{stupid\_verboseSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{subtract\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{subtract\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{testSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{testSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{upconversion\_line\_dropdownSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{upconversion\_line\_dropdownSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{update\_gui\_tables() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{update\_gui\_tables()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{verboseSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{verboseSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{write\_directory\_boxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{write\_directory\_boxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{write\_file\_checkboxSlot() (SFGToolsGUI.MainWindowUIClass method)@\spxentry{write\_file\_checkboxSlot()}\spxextra{SFGToolsGUI.MainWindowUIClass method}|hyperpage}{9}
+\indexentry{TableModel (class in SFGToolsGUI)@\spxentry{TableModel}\spxextra{class in SFGToolsGUI}|hyperpage}{9}
+\indexentry{add\_rows() (SFGToolsGUI.TableModel method)@\spxentry{add\_rows()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{columnCount() (SFGToolsGUI.TableModel method)@\spxentry{columnCount()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{data() (SFGToolsGUI.TableModel method)@\spxentry{data()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{flags() (SFGToolsGUI.TableModel method)@\spxentry{flags()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{headerData() (SFGToolsGUI.TableModel method)@\spxentry{headerData()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{rowCount() (SFGToolsGUI.TableModel method)@\spxentry{rowCount()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{setData() (SFGToolsGUI.TableModel method)@\spxentry{setData()}\spxextra{SFGToolsGUI.TableModel method}|hyperpage}{9}
+\indexentry{main() (in module SFGToolsGUI)@\spxentry{main()}\spxextra{in module SFGToolsGUI}|hyperpage}{9}
+\indexentry{module@\spxentry{module}!SFGTools\_ui@\spxentry{SFGTools\_ui}|hyperpage}{9}
+\indexentry{SFGTools\_ui@\spxentry{SFGTools\_ui}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{Ui\_MainWindow (class in SFGTools\_ui)@\spxentry{Ui\_MainWindow}\spxextra{class in SFGTools\_ui}|hyperpage}{9}
+\indexentry{retranslateUi() (SFGTools\_ui.Ui\_MainWindow method)@\spxentry{retranslateUi()}\spxextra{SFGTools\_ui.Ui\_MainWindow method}|hyperpage}{9}
+\indexentry{setupUi() (SFGTools\_ui.Ui\_MainWindow method)@\spxentry{setupUi()}\spxextra{SFGTools\_ui.Ui\_MainWindow method}|hyperpage}{9}
+\indexentry{module@\spxentry{module}!sfgtools@\spxentry{sfgtools}|hyperpage}{9}
+\indexentry{sfgtools@\spxentry{sfgtools}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{SFGProcessTools (class in sfgtools)@\spxentry{SFGProcessTools}\spxextra{class in sfgtools}|hyperpage}{9}
+\indexentry{verbose (sfgtools.SFGProcessTools attribute)@\spxentry{verbose}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{9}
+\indexentry{stupid\_verbose (sfgtools.SFGProcessTools attribute)@\spxentry{stupid\_verbose}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{sum\_accumulations (sfgtools.SFGProcessTools attribute)@\spxentry{sum\_accumulations}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{series\_accumulations (sfgtools.SFGProcessTools attribute)@\spxentry{series\_accumulations}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{downconvert\_check (sfgtools.SFGProcessTools attribute)@\spxentry{downconvert\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{subtract\_check (sfgtools.SFGProcessTools attribute)@\spxentry{subtract\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{normalise\_check (sfgtools.SFGProcessTools attribute)@\spxentry{normalise\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{calibrate\_check (sfgtools.SFGProcessTools attribute)@\spxentry{calibrate\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{exposure\_check (sfgtools.SFGProcessTools attribute)@\spxentry{exposure\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{cosmic\_kill\_check (sfgtools.SFGProcessTools attribute)@\spxentry{cosmic\_kill\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{stack\_plots\_check (sfgtools.SFGProcessTools attribute)@\spxentry{stack\_plots\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{global\_force (sfgtools.SFGProcessTools attribute)@\spxentry{global\_force}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{write\_file\_check (sfgtools.SFGProcessTools attribute)@\spxentry{write\_file\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{plot\_data\_check (sfgtools.SFGProcessTools attribute)@\spxentry{plot\_data\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{close\_plots\_check (sfgtools.SFGProcessTools attribute)@\spxentry{close\_plots\_check}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{10}
+\indexentry{data\_directory (sfgtools.SFGProcessTools attribute)@\spxentry{data\_directory}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{write\_directory (sfgtools.SFGProcessTools attribute)@\spxentry{write\_directory}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{samplestring (sfgtools.SFGProcessTools attribute)@\spxentry{samplestring}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{refstring (sfgtools.SFGProcessTools attribute)@\spxentry{refstring}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{bg\_string (sfgtools.SFGProcessTools attribute)@\spxentry{bg\_string}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{upconversion\_line\_num (sfgtools.SFGProcessTools attribute)@\spxentry{upconversion\_line\_num}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{calibration\_offset (sfgtools.SFGProcessTools attribute)@\spxentry{calibration\_offset}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{custom\_region\_start (sfgtools.SFGProcessTools attribute)@\spxentry{custom\_region\_start}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{custom\_region\_end (sfgtools.SFGProcessTools attribute)@\spxentry{custom\_region\_end}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{cosmic\_threshold (sfgtools.SFGProcessTools attribute)@\spxentry{cosmic\_threshold}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{cosmic\_max\_width (sfgtools.SFGProcessTools attribute)@\spxentry{cosmic\_max\_width}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{spe\_version\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{spe\_version\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{footer\_offset\_loc\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{footer\_offset\_loc\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{data\_offset\_loc\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{data\_offset\_loc\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{framewidth\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{framewidth\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{11}
+\indexentry{frameheight\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{frameheight\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{numframes\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{numframes\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{pixeltype\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{pixeltype\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{acqtime\_loc (sfgtools.SFGProcessTools attribute)@\spxentry{acqtime\_loc}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{signal\_names (sfgtools.SFGProcessTools attribute)@\spxentry{signal\_names}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{bg\_names (sfgtools.SFGProcessTools attribute)@\spxentry{bg\_names}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{ref\_names (sfgtools.SFGProcessTools attribute)@\spxentry{ref\_names}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{ref\_bg\_names (sfgtools.SFGProcessTools attribute)@\spxentry{ref\_bg\_names}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{ref\_num (sfgtools.SFGProcessTools attribute)@\spxentry{ref\_num}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{sig\_ref\_num (sfgtools.SFGProcessTools attribute)@\spxentry{sig\_ref\_num}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{tabledata (sfgtools.SFGProcessTools attribute)@\spxentry{tabledata}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{reftabledata (sfgtools.SFGProcessTools attribute)@\spxentry{reftabledata}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{current\_figure (sfgtools.SFGProcessTools attribute)@\spxentry{current\_figure}\spxextra{sfgtools.SFGProcessTools attribute}|hyperpage}{12}
+\indexentry{SFGProcessTools.SFGDataStore (class in sfgtools)@\spxentry{SFGProcessTools.SFGDataStore}\spxextra{class in sfgtools}|hyperpage}{12}
+\indexentry{acqtime (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{acqtime}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{acqtime\_bg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{acqtime\_bg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{acqtime\_ref (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{acqtime\_ref}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{acqtime\_refbg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{acqtime\_refbg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{applied\_calibration (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{applied\_calibration}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{background (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{background}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{background\_subtract() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{background\_subtract()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{13}
+\indexentry{background\_subtracted (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{background\_subtracted}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{calibrate\_spectrum() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{calibrate\_spectrum()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{13}
+\indexentry{calibrated (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{calibrated}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{cosmic\_bg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{cosmic\_bg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{cosmic\_ray\_killer() (sfgtools.SFGProcessTools.SFGDataStore static method)@\spxentry{cosmic\_ray\_killer()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore static method}|hyperpage}{13}
+\indexentry{cosmic\_ref (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{cosmic\_ref}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{cosmic\_refbg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{cosmic\_refbg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{cosmic\_sig (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{cosmic\_sig}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{13}
+\indexentry{creationtime (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{creationtime}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{divide\_exposure() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{divide\_exposure()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{14}
+\indexentry{downconvert\_spectrum() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{downconvert\_spectrum()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{14}
+\indexentry{downconverted (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{downconverted}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{exp\_divided\_bg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{exp\_divided\_bg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{exp\_divided\_ref (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{exp\_divided\_ref}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{exp\_divided\_refbg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{exp\_divided\_refbg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{exp\_divided\_sig (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{exp\_divided\_sig}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{exposure\_subroutine() (sfgtools.SFGProcessTools.SFGDataStore static method)@\spxentry{exposure\_subroutine()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore static method}|hyperpage}{14}
+\indexentry{filename\_bg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{filename\_bg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{filename\_ref (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{filename\_ref}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{filename\_refbg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{filename\_refbg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{filename\_sig (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{filename\_sig}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{frameheight (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{frameheight}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{framewidth (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{framewidth}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{group (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{group}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{index (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{index}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{normalise\_data() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{normalise\_data()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{14}
+\indexentry{normalised (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{normalised}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{14}
+\indexentry{numframes (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{numframes}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{polarisation (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{polarisation}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{ref\_background\_subtract() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{ref\_background\_subtract()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{15}
+\indexentry{ref\_bg (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{ref\_bg}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{ref\_raw (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{ref\_raw}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{ref\_subtracted (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{ref\_subtracted}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{refbackground\_subtracted (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{refbackground\_subtracted}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{remove\_cosmic\_rays() (sfgtools.SFGProcessTools.SFGDataStore method)@\spxentry{remove\_cosmic\_rays()}\spxextra{sfgtools.SFGProcessTools.SFGDataStore method}|hyperpage}{15}
+\indexentry{sample (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{sample}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{signal\_normalised (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{signal\_normalised}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{signal\_raw (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{signal\_raw}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{signal\_subtracted (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{signal\_subtracted}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{timestamps (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{timestamps}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{upconverter\_used (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{upconverter\_used}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{wavelength (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{wavelength}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{xaxis (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{xaxis}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{xaxis\_raw (sfgtools.SFGProcessTools.SFGDataStore attribute)@\spxentry{xaxis\_raw}\spxextra{sfgtools.SFGProcessTools.SFGDataStore attribute}|hyperpage}{15}
+\indexentry{assign\_acqtime\_to\_storage() (sfgtools.SFGProcessTools static method)@\spxentry{assign\_acqtime\_to\_storage()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{15}
+\indexentry{assign\_data\_to\_storage() (sfgtools.SFGProcessTools static method)@\spxentry{assign\_data\_to\_storage()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{15}
+\indexentry{assign\_filename\_to\_storage() (sfgtools.SFGProcessTools static method)@\spxentry{assign\_filename\_to\_storage()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{16}
+\indexentry{batch\_process() (sfgtools.SFGProcessTools method)@\spxentry{batch\_process()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{16}
+\indexentry{cm\_to\_nm() (sfgtools.SFGProcessTools static method)@\spxentry{cm\_to\_nm()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{16}
+\indexentry{cm\_to\_thz() (sfgtools.SFGProcessTools static method)@\spxentry{cm\_to\_thz()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{16}
+\indexentry{create\_data\_stores() (sfgtools.SFGProcessTools method)@\spxentry{create\_data\_stores()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{16}
+\indexentry{create\_matched\_ref\_list() (sfgtools.SFGProcessTools static method)@\spxentry{create\_matched\_ref\_list()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{16}
+\indexentry{get\_closest\_file() (sfgtools.SFGProcessTools method)@\spxentry{get\_closest\_file()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{16}
+\indexentry{get\_file\_creationtime() (sfgtools.SFGProcessTools static method)@\spxentry{get\_file\_creationtime()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{17}
+\indexentry{get\_filenames\_smart() (sfgtools.SFGProcessTools method)@\spxentry{get\_filenames\_smart()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{17}
+\indexentry{get\_pixel\_type() (sfgtools.SFGProcessTools method)@\spxentry{get\_pixel\_type()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{17}
+\indexentry{get\_window() (sfgtools.SFGProcessTools static method)@\spxentry{get\_window()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{17}
+\indexentry{match\_files() (sfgtools.SFGProcessTools method)@\spxentry{match\_files()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{17}
+\indexentry{match\_files\_with\_background() (sfgtools.SFGProcessTools method)@\spxentry{match\_files\_with\_background()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{18}
+\indexentry{match\_files\_with\_reference() (sfgtools.SFGProcessTools method)@\spxentry{match\_files\_with\_reference()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{18}
+\indexentry{match\_polarisations\_bg() (sfgtools.SFGProcessTools static method)@\spxentry{match\_polarisations\_bg()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{18}
+\indexentry{nm\_to\_cm() (sfgtools.SFGProcessTools static method)@\spxentry{nm\_to\_cm()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{19}
+\indexentry{nm\_to\_thz() (sfgtools.SFGProcessTools static method)@\spxentry{nm\_to\_thz()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{19}
+\indexentry{open\_spe() (sfgtools.SFGProcessTools method)@\spxentry{open\_spe()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{19}
+\indexentry{parse\_filename() (sfgtools.SFGProcessTools method)@\spxentry{parse\_filename()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{19}
+\indexentry{plot\_data() (sfgtools.SFGProcessTools method)@\spxentry{plot\_data()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{19}
+\indexentry{populate\_data\_stores() (sfgtools.SFGProcessTools method)@\spxentry{populate\_data\_stores()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{19}
+\indexentry{print\_attributes() (sfgtools.SFGProcessTools static method)@\spxentry{print\_attributes()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{20}
+\indexentry{process\_data() (sfgtools.SFGProcessTools method)@\spxentry{process\_data()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{20}
+\indexentry{process\_spe2x() (sfgtools.SFGProcessTools method)@\spxentry{process\_spe2x()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{20}
+\indexentry{process\_spe3x() (sfgtools.SFGProcessTools method)@\spxentry{process\_spe3x()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{20}
+\indexentry{pull\_trigger() (sfgtools.SFGProcessTools method)@\spxentry{pull\_trigger()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{21}
+\indexentry{read\_at() (sfgtools.SFGProcessTools static method)@\spxentry{read\_at()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{21}
+\indexentry{read\_files() (sfgtools.SFGProcessTools method)@\spxentry{read\_files()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{21}
+\indexentry{remove\_duplicate\_refs() (sfgtools.SFGProcessTools static method)@\spxentry{remove\_duplicate\_refs()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{21}
+\indexentry{slice\_data() (sfgtools.SFGProcessTools static method)@\spxentry{slice\_data()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{21}
+\indexentry{thz\_to\_cm() (sfgtools.SFGProcessTools static method)@\spxentry{thz\_to\_cm()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{22}
+\indexentry{thz\_to\_nm() (sfgtools.SFGProcessTools static method)@\spxentry{thz\_to\_nm()}\spxextra{sfgtools.SFGProcessTools static method}|hyperpage}{22}
+\indexentry{update\_datatable() (sfgtools.SFGProcessTools method)@\spxentry{update\_datatable()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{22}
+\indexentry{update\_reftable() (sfgtools.SFGProcessTools method)@\spxentry{update\_reftable()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{22}
+\indexentry{write\_data\_to\_file() (sfgtools.SFGProcessTools method)@\spxentry{write\_data\_to\_file()}\spxextra{sfgtools.SFGProcessTools method}|hyperpage}{22}

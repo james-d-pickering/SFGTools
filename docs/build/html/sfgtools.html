@@ -1,0 +1,1529 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>sfgtools module &#8212; SFGTools 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">sfgtools module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sfgtools">
+<span id="sfgtools-module"></span><h1>sfgtools module<a class="headerlink" href="#module-sfgtools" title="Permalink to this headline">¶</a></h1>
+<p>Tools for processing SFG Data.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>SFGProcess Tools</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sfgtools.</span></span><span class="sig-name descname"><span class="pre">SFGProcessTools</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that contains SFG processing tools.</p>
+<p>This is implemented as a class so it can be easily invoked as a model for a PyQT GUI, under the MVC
+framework.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.verbose">
+<span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.verbose" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true tells program to print verbose output,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.stupid_verbose">
+<span class="sig-name descname"><span class="pre">stupid_verbose</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.stupid_verbose" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true tells program to print REALLY verbose output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.sum_accumulations">
+<span class="sig-name descname"><span class="pre">sum_accumulations</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.sum_accumulations" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true tells program to sum multiple frames stored in the same .spe file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.series_accumulations">
+<span class="sig-name descname"><span class="pre">series_accumulations</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.series_accumulations" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true tells program to store multiple frames from the same .spe file as different arrays (series).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.downconvert_check">
+<span class="sig-name descname"><span class="pre">downconvert_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.downconvert_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then spectra are downconverted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.subtract_check">
+<span class="sig-name descname"><span class="pre">subtract_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.subtract_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then spectra are background subtracted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.normalise_check">
+<span class="sig-name descname"><span class="pre">normalise_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.normalise_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then spectra are normalised by a reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.calibrate_check">
+<span class="sig-name descname"><span class="pre">calibrate_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.calibrate_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then spectrum energy is shifted by +calibration_offset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.exposure_check">
+<span class="sig-name descname"><span class="pre">exposure_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.exposure_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then all spectra are divided by their relevant exposure time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.cosmic_kill_check">
+<span class="sig-name descname"><span class="pre">cosmic_kill_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.cosmic_kill_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then cosmic ray spikes are attempted to be removed automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.stack_plots_check">
+<span class="sig-name descname"><span class="pre">stack_plots_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.stack_plots_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then plots from multiple loaded files are stacked onto one figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.global_force">
+<span class="sig-name descname"><span class="pre">global_force</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.global_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then attempts to (e.g.) downconvert spectra twice are allowed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.write_file_check">
+<span class="sig-name descname"><span class="pre">write_file_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.write_file_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then a .txt file with the processed data is written.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.plot_data_check">
+<span class="sig-name descname"><span class="pre">plot_data_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.plot_data_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then processed data is plotted using matplotlib.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.close_plots_check">
+<span class="sig-name descname"><span class="pre">close_plots_check</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.close_plots_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true then plots are closed between successive runs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.data_directory">
+<span class="sig-name descname"><span class="pre">data_directory</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.data_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Direcotry where all the files to processed are.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.write_directory">
+<span class="sig-name descname"><span class="pre">write_directory</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.write_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directory where output files will be written to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.samplestring">
+<span class="sig-name descname"><span class="pre">samplestring</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.samplestring" title="Permalink to this definition">¶</a></dt>
+<dd><p>What the smart file getter looks for at the start of a filename to identify a file as relevant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.refstring">
+<span class="sig-name descname"><span class="pre">refstring</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.refstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>What the smart file getter looks for at the start of a filename to identify a file as a reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.bg_string">
+<span class="sig-name descname"><span class="pre">bg_string</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.bg_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>What the smart file getter looks for to identify a file as a background file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.upconversion_line_num">
+<span class="sig-name descname"><span class="pre">upconversion_line_num</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.upconversion_line_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wavelength of the upconverter in nanometres.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.calibration_offset">
+<span class="sig-name descname"><span class="pre">calibration_offset</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.calibration_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amount to shift a spectrum energy axis in wavenumbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.custom_region_start">
+<span class="sig-name descname"><span class="pre">custom_region_start</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.custom_region_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines leftmost edge of plotted data in wavenumbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.custom_region_end">
+<span class="sig-name descname"><span class="pre">custom_region_end</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.custom_region_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines rightmost edge of plotted data in wavenumbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.cosmic_threshold">
+<span class="sig-name descname"><span class="pre">cosmic_threshold</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.cosmic_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by the cosmic_ray_killer method. See description for detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.cosmic_max_width">
+<span class="sig-name descname"><span class="pre">cosmic_max_width</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.cosmic_max_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by the cosmic_ray_killer method. See description for detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.spe_version_loc">
+<span class="sig-name descname"><span class="pre">spe_version_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.spe_version_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes that the .spe file version is stored in the .spe file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.footer_offset_loc_loc">
+<span class="sig-name descname"><span class="pre">footer_offset_loc_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.footer_offset_loc_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes that the location in bytes that the offset to the XML footer is found in an
+SPE3.0 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.data_offset_loc_loc">
+<span class="sig-name descname"><span class="pre">data_offset_loc_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.data_offset_loc_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes of the location in bytes to the first data in an SPE2.x file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.framewidth_loc">
+<span class="sig-name descname"><span class="pre">framewidth_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.framewidth_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes of the framewidth of an SPE2.x file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.frameheight_loc">
+<span class="sig-name descname"><span class="pre">frameheight_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.frameheight_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes of the frameheight of an SPE2.x file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.numframes_loc">
+<span class="sig-name descname"><span class="pre">numframes_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.numframes_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes of the number of frames stored in an SPE2.x file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.pixeltype_loc">
+<span class="sig-name descname"><span class="pre">pixeltype_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.pixeltype_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes of the pixel type stored in an SPE2.x file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.acqtime_loc">
+<span class="sig-name descname"><span class="pre">acqtime_loc</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.acqtime_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location in bytes of the acquisition time in an SPE2.x file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.signal_names">
+<span class="sig-name descname"><span class="pre">signal_names</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.signal_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the filenames of the signal files to be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.bg_names">
+<span class="sig-name descname"><span class="pre">bg_names</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.bg_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the filenames of the background files to be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.ref_names">
+<span class="sig-name descname"><span class="pre">ref_names</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.ref_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the filenames of the reference files to be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.ref_bg_names">
+<span class="sig-name descname"><span class="pre">ref_bg_names</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.ref_bg_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the filenames of the reference background files to be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.ref_num">
+<span class="sig-name descname"><span class="pre">ref_num</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.ref_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the reFID number of each reference file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.sig_ref_num">
+<span class="sig-name descname"><span class="pre">sig_ref_num</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.sig_ref_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the refID number that each signal file needs to be normalised by.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.tabledata">
+<span class="sig-name descname"><span class="pre">tabledata</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.tabledata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains data to be shown in the GUI main data table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.reftabledata">
+<span class="sig-name descname"><span class="pre">reftabledata</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.reftabledata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains data to be down in the GUI reference data table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.current_figure">
+<span class="sig-name descname"><span class="pre">current_figure</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.current_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Figure data is currently being plotted on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pyplot figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SFGDataStore</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is where the SFG data is stored.</p>
+<p>An instance of the class is created for every distinct signal file - i.e. a file that is not a
+background or reference file. The slots define different things that can be associated with the
+signal file. Each slot has an associated attribute.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.acqtime">
+<span class="sig-name descname"><span class="pre">acqtime</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.acqtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.acqtime_bg">
+<span class="sig-name descname"><span class="pre">acqtime_bg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.acqtime_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.acqtime_ref">
+<span class="sig-name descname"><span class="pre">acqtime_ref</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.acqtime_ref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.acqtime_refbg">
+<span class="sig-name descname"><span class="pre">acqtime_refbg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.acqtime_refbg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.applied_calibration">
+<span class="sig-name descname"><span class="pre">applied_calibration</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.applied_calibration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.background">
+<span class="sig-name descname"><span class="pre">background</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.background" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.background_subtract">
+<span class="sig-name descname"><span class="pre">background_subtract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.background_subtract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtract the background spectrum from the signal spectrum.</p>
+<p>Subtracts background attribute from the signal attribute (if it already exists),
+or raw attribute (if it doesn’t). Either way the signal attribute is created.</p>
+<blockquote>
+<div><p>Parameters</p>
+</div></blockquote>
+<dl class="simple">
+<dt>force<span class="classifier">bool, optional</span></dt><dd><p>Allows subtraction more than once if true. Default False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.background_subtracted">
+<span class="sig-name descname"><span class="pre">background_subtracted</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.background_subtracted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.calibrate_spectrum">
+<span class="sig-name descname"><span class="pre">calibrate_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.calibrate_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift the energy axis of a spectrum by +calibration_offset.</p>
+<p>Passing “force” and calibrating multiple times will update the applied_calibration attribute
+of datastore to keep track of what has been done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calibration_offset</strong> (<em>float</em>) – The amount to shift the energy xaxis, in wavenumbers. Positive numbers shift to higher energy.</p></li>
+<li><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows calibration more than once if true. Default False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.calibrated">
+<span class="sig-name descname"><span class="pre">calibrated</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.calibrated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.cosmic_bg">
+<span class="sig-name descname"><span class="pre">cosmic_bg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.cosmic_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.cosmic_ray_killer">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cosmic_ray_killer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.cosmic_ray_killer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove cosmic ray contributions from data.</p>
+<p>Algorithm from Steven J Roeters. Not thoroughly tested but implemented for future use.</p>
+<p>Questionably robust method for doing it that might just require endless tweaking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>np array</em>) – Array containing the data to have cosmic ray contributions removed. Shape (1, width).</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Min height above the background signal that a spike has to have to be considered a
+cosmic ray.</p></li>
+<li><p><strong>max_width</strong> (<em>int</em>) – Anything wider that max_width is considered real signal and not a cosmic ray.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>data</strong> (<em>np array</em>) – Data with cosmic ray contributions removed.</p></li>
+<li><p><strong>rays_removed</strong> (<em>bool</em>) – Flag used to keep track of whether or not the data has had cosmic ray contributions
+removed.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.cosmic_ref">
+<span class="sig-name descname"><span class="pre">cosmic_ref</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.cosmic_ref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.cosmic_refbg">
+<span class="sig-name descname"><span class="pre">cosmic_refbg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.cosmic_refbg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.cosmic_sig">
+<span class="sig-name descname"><span class="pre">cosmic_sig</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.cosmic_sig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.creationtime">
+<span class="sig-name descname"><span class="pre">creationtime</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.creationtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.divide_exposure">
+<span class="sig-name descname"><span class="pre">divide_exposure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.divide_exposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide all stored spectra by their relevant exposure times.</p>
+<p>Call this on the raw data before you do further processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows exposure division more than once if true. Default False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.downconvert_spectrum">
+<span class="sig-name descname"><span class="pre">downconvert_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upconverter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.downconvert_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downconvert the energy axis in the spectrum by upconverter in wavenumbers.</p>
+<p>Overwrites xaxis attribute with the downconverted version.
+The original xaxis attribute is stored as xaxis_raw if needed later.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>upconverter</strong> (<em>float</em>) – The energy of the upconversion line to subtract in wavenumbers.</p></li>
+<li><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows downconversion more than once if true. Default False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.downconverted">
+<span class="sig-name descname"><span class="pre">downconverted</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.downconverted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.exp_divided_bg">
+<span class="sig-name descname"><span class="pre">exp_divided_bg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.exp_divided_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.exp_divided_ref">
+<span class="sig-name descname"><span class="pre">exp_divided_ref</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.exp_divided_ref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.exp_divided_refbg">
+<span class="sig-name descname"><span class="pre">exp_divided_refbg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.exp_divided_refbg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.exp_divided_sig">
+<span class="sig-name descname"><span class="pre">exp_divided_sig</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.exp_divided_sig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.exposure_subroutine">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">exposure_subroutine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.exposure_subroutine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide the given spectrum by its exposure time.</p>
+<p>This subroutine is called multiple times by divide_exposure()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>np.ndarray</em>) – The data to be divided by exposure time.</p></li>
+<li><p><strong>time</strong> (<em>float</em>) – The exposure time to divide by.</p></li>
+<li><p><strong>flag</strong> (<em>bool</em>) – True if the spectrum has already been divided, used to prevent unwanted multiple calls.</p></li>
+<li><p><strong>string</strong> (<em>str</em>) – Refers to the type of spectrum being subtracted. Possible values:
+“signal”, “background”, “reference”, “reference background”</p></li>
+<li><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows exposure division more than once if true. Default False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.filename_bg">
+<span class="sig-name descname"><span class="pre">filename_bg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.filename_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.filename_ref">
+<span class="sig-name descname"><span class="pre">filename_ref</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.filename_ref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.filename_refbg">
+<span class="sig-name descname"><span class="pre">filename_refbg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.filename_refbg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.filename_sig">
+<span class="sig-name descname"><span class="pre">filename_sig</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.filename_sig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.frameheight">
+<span class="sig-name descname"><span class="pre">frameheight</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.frameheight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.framewidth">
+<span class="sig-name descname"><span class="pre">framewidth</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.framewidth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.group">
+<span class="sig-name descname"><span class="pre">group</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.index">
+<span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.normalise_data">
+<span class="sig-name descname"><span class="pre">normalise_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.normalise_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide a signal spectrum by the reference spectrum.</p>
+<p>Will divide by the subtracted spectrum if it exists, otherwise from the raw spectrum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows normalisation more than once if true. Default False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.normalised">
+<span class="sig-name descname"><span class="pre">normalised</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.normalised" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.numframes">
+<span class="sig-name descname"><span class="pre">numframes</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.numframes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.polarisation">
+<span class="sig-name descname"><span class="pre">polarisation</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.polarisation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.ref_background_subtract">
+<span class="sig-name descname"><span class="pre">ref_background_subtract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.ref_background_subtract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtracts background from the reference signal.</p>
+<p>Subtracts from ref_raw unless ref_subtracted exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows subtraction more than once if true. Default False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.ref_bg">
+<span class="sig-name descname"><span class="pre">ref_bg</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.ref_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.ref_raw">
+<span class="sig-name descname"><span class="pre">ref_raw</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.ref_raw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.ref_subtracted">
+<span class="sig-name descname"><span class="pre">ref_subtracted</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.ref_subtracted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.refbackground_subtracted">
+<span class="sig-name descname"><span class="pre">refbackground_subtracted</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.refbackground_subtracted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.remove_cosmic_rays">
+<span class="sig-name descname"><span class="pre">remove_cosmic_rays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.remove_cosmic_rays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call cosmic_ray_killer on raw data.</p>
+<p>Uses flag to decide what kind of raw data to apply the removal to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – Min height above the background signal that a spike has to have to be considered a
+cosmic ray.</p></li>
+<li><p><strong>max_width</strong> (<em>int</em>) – Anything wider that max_width is considered real signal and not a cosmic ray.</p></li>
+<li><p><strong>flag</strong> (<em>str</em>) – Determines what attribute of SFGDataStore to remove rays from. Possible values are
+“sig”, “bg”, “ref”, “refbg”, or “all”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.signal_normalised">
+<span class="sig-name descname"><span class="pre">signal_normalised</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.signal_normalised" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.signal_raw">
+<span class="sig-name descname"><span class="pre">signal_raw</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.signal_raw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.signal_subtracted">
+<span class="sig-name descname"><span class="pre">signal_subtracted</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.signal_subtracted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.timestamps">
+<span class="sig-name descname"><span class="pre">timestamps</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.timestamps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.upconverter_used">
+<span class="sig-name descname"><span class="pre">upconverter_used</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.upconverter_used" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.wavelength">
+<span class="sig-name descname"><span class="pre">wavelength</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.wavelength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.xaxis">
+<span class="sig-name descname"><span class="pre">xaxis</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.xaxis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.SFGDataStore.xaxis_raw">
+<span class="sig-name descname"><span class="pre">xaxis_raw</span></span><a class="headerlink" href="#sfgtools.SFGProcessTools.SFGDataStore.xaxis_raw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.assign_acqtime_to_storage">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">assign_acqtime_to_storage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acqtime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.assign_acqtime_to_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take the assigned flag and put the acquisition time from the file in the right datastore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flag</strong> (<em>str</em>) – Defines the storage attribute of datastore to put the exposure time into. Possible values “sig”,
+“bg”, “ref”, “refbg”.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – The datastore instance to put the acquisition time into.</p></li>
+<li><p><strong>acqtime</strong> (<em>float</em>) – Acqusition time in seconds.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.assign_data_to_storage">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">assign_data_to_storage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.assign_data_to_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take the assigned flag and put the data read from the file in the right datastore attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flag</strong> (<em>str</em>) – Defines the storage attribute of datastore to put the data into. Possible values “sig”, “bg”,
+“ref”, “refbg”.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – The datastore instance to put the data into.</p></li>
+<li><p><strong>data</strong> (<em>np array</em>) – Numpy array of the data to store.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.assign_filename_to_storage">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">assign_filename_to_storage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.assign_filename_to_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take the assigned flag and put the filename into the right datastore attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flag</strong> (<em>str</em>) – Defines the storage attribute of datastore to put the filename into. Possible values “sig”, “bg”,
+“ref”, “refbg”.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – The datastore instance to put the data into.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Filename to store in datastore.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.batch_process">
+<span class="sig-name descname"><span class="pre">batch_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastores</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.batch_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process all data in the instances contained in datastores.</p>
+<p>Assumes you have a list of populated SFGDataStore objects to process (one per file).</p>
+<p>Here the bool checks are all called as class attributes via self rather than passed explicitly,
+which makes life slightly less cumbersome when invoking it in the GUI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>datastores</strong> (<em>list</em>) – Contains SFGDataStore objects, one per file to be processed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.cm_to_nm">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cm_to_nm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.cm_to_nm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert data from wavenumber to nanometre.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.cm_to_thz">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cm_to_thz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.cm_to_thz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert data from wavenumber to terahertz.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.create_data_stores">
+<span class="sig-name descname"><span class="pre">create_data_stores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_files</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.create_data_stores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a list of SFGDataStore classes of length num_files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_files</strong> (<em>int</em>) – Number of files to process (and SFGDataStore instances to create).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>datastores</strong> – Contains empty SFGDataStore instances to be populated.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.create_matched_ref_list">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_matched_ref_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig_ref_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_bg_filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.create_matched_ref_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create lists of the reference files matched to signal files for processing.</p>
+<p>Reads the list sig_ref_id and creates new lists of the same length as the list of signal files
+containing the right reference/reference background files for processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sig_ref_id</strong> (<em>list</em>) – Contains the refIDs that each signal file needs to be processed with.</p></li>
+<li><p><strong>ref_filenames</strong> (<em>list</em>) – Contains the reference filenames.</p></li>
+<li><p><strong>ref_bg_filenames</strong> (<em>list</em>) – Contains the reference background filenames.</p></li>
+<li><p><strong>ref_id</strong> (<em>list</em>) – Contains the refIDs that each reference file corresponds to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>ref_matched</strong> (<em>list</em>) – Contains the filenames of the reference files that each signal file needs to be normalised to.</p></li>
+<li><p><strong>refbg_matched</strong> (<em>list</em>) – Contains the filenames of the reference background files that each signal file needs.</p></li>
+<li><p><strong>ref_num</strong> (<em>list</em>) – The number of each reference file used (for display in GUI).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.get_closest_file">
+<span class="sig-name descname"><span class="pre">get_closest_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.get_closest_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare the time of last modification of each element of files, and find the closest one to target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>files</strong> (<em>list</em>) – Contains files that are being tested for closeness-in-time to target.</p></li>
+<li><p><strong>target</strong> (<em>str</em>) – File that is used as a target to find the closest file to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>closest_file</strong> – The element of files that was created at the closest time to target.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.get_file_creationtime">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_file_creationtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.get_file_creationtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the time of last modification of the file input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.get_filenames_smart">
+<span class="sig-name descname"><span class="pre">get_filenames_smart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.get_filenames_smart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Globs all .spe files in the current data directory and sorts them into lists.</p>
+<p>Used mostly in the GUI so parameters are all class attributes modified by the GUI. This method
+looks in a directory for all the .spe files that are present, and then splits them up into signal,
+background, reference, and reference background, in line with the (user supplied) strings that
+determine if a file is a sample, reference, or background. For example, using attributes:</p>
+<p>self.samplestring = sampledata
+self.refstring = referencedata
+self.bg_string = _bg</p>
+<p>Would sort the following files as follows:</p>
+<p>sampledata.spe -&gt; signal
+sampledata_bg.spe -&gt; background
+referencedata.spe -&gt; reference
+referencedata_bg.spe -&gt; reference background</p>
+<p>It is important that the files START with the supplied sample and ref strings. The bg string can be
+anywhere in the filename.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>signal_names</strong> (<em>list</em>) – Contains names of signal files.</p></li>
+<li><p><strong>bg_names</strong> (<em>list</em>) – Contains names of background files.</p></li>
+<li><p><strong>ref_names</strong> (<em>list</em>) – Contains names of reference files.</p></li>
+<li><p><strong>ref_bg_names</strong> (<em>list</em>) – Contains names of reference background files.</p></li>
+<li><p><strong>ref_id</strong> (<em>list</em>) – Contains indexes for each unique reference file (later associated with a corresponding signal
+file).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.get_pixel_type">
+<span class="sig-name descname"><span class="pre">get_pixel_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixeltype</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.get_pixel_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the pixel type given by SPE 2.x and 3.0 files to numpy datatype.</p>
+<p>The pixeltype read from the SPE file is either a string (spe 3.0) or an integer (spe 2.x) that
+needs decoding. This method converts either to a numpy datatype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pixeltype</strong> (<em>int</em><em> or </em><em>str</em>) – The pixeltype obtained from reading the SPE file. str for SPE 3.0, int for SPE 2.x.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pixeltype_np</strong> (<em>numpy datatype</em>) – Numpy datatype corresponding to the pixel datatype.</p></li>
+<li><p><strong>pixelsize</strong> (<em>int</em>) – Size of the pixel in bytes.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.get_window">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_dev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.get_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>UNUSED. Get the indices of the reference array where spectral intensity is non-zero.</p>
+<p>It’s a bit of a clunkfest and not very reliable.</p>
+<p>NOT IMPLEMENTED IN V1.0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.match_files">
+<span class="sig-name descname"><span class="pre">match_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refbg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.match_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match each signal file with its corresponding reference and background files.</p>
+<p>Calls previously defined methods to populate the lists needed to run data processing.</p>
+<p>To labour the point, the idea is that for processing you need up to four lists of the same length
+containing the file names to be processed. The background/reference/reference background file that
+correspond to element n of the signal list are in element n of their respective lists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sig</strong> (<em>list</em>) – Signal files to be matched to.</p></li>
+<li><p><strong>bg</strong> (<em>list</em>) – Laoded background files, unmatched.</p></li>
+<li><p><strong>ref</strong> (<em>list</em>) – Loaded reference files, umatched.</p></li>
+<li><p><strong>refbg</strong> (<em>list</em>) – Loadaed reference background files, unmatched.</p></li>
+<li><p><strong>refid</strong> (<em>list</em>) – List of the refIDs that correspond to each reference file.</p></li>
+<li><p><strong>directory</strong> (<em>str</em>) – Directory where all the data files are located.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>sig</strong> (<em>list</em>) – Signal files to be matched to.</p></li>
+<li><p><strong>bg_matched</strong> (<em>list</em>) – Background files matched to signal files.</p></li>
+<li><p><strong>ref_matched</strong> (<em>list</em>) – Reference files matched to signal files.</p></li>
+<li><p><strong>refbg_matched</strong> (<em>list</em>) – Reference background files matched to signal files.</p></li>
+<li><p><strong>sig_ref_id</strong> (<em>list</em>) – RefIDs of the reference file each signal file needs.</p></li>
+<li><p><em>ref_num</em> – RefIDs of the reference files only.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.match_files_with_background">
+<span class="sig-name descname"><span class="pre">match_files_with_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.match_files_with_background" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match each signal file with the appropriate background file.</p>
+<p>First checks if there are any files that have the same name when bg_string is removed. If there are
+then these are defined as the background. If not, then the nearest background file to the signal
+file (in terms of creation time) is chosen.</p>
+<p>Could be updated to include some way of strictly matching polarisations, rather than implicitly as
+here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filenames</strong> (<em>list</em>) – Contains the signal filenames that need to be matched with a background.</p></li>
+<li><p><strong>bg_filenames</strong> (<em>list</em>) – Contains the background filenames to match with.</p></li>
+<li><p><strong>directory</strong> (<em>str</em>) – The directory containing the background and signal filenames.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.match_files_with_reference">
+<span class="sig-name descname"><span class="pre">match_files_with_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig_filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.match_files_with_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match each signal file with the appropriate reference file.</p>
+<p>As there are generally going to be many more signal files than references, each reference is given
+an ID which is then matched to the signal file. An array containing the refIDs for each signal file
+is returned.</p>
+<p>Finds the closest reference file to the signal file used in terms of creation time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sig_filenames</strong> (<em>list</em>) – Contains the signal filenames that need to be matched with a reference.</p></li>
+<li><p><strong>ref_filenames</strong> (<em>list</em>) – Contains the reference filenames to match with.</p></li>
+<li><p><strong>ref_id</strong> (<em>list</em>) – Contains the refID of each reference file</p></li>
+<li><p><strong>directory</strong> (<em>str</em>) – The directory containing the background and signal filenames.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sig_ref_id</strong> – Contains the refID of the reference file that each signal file needs to be normalised to.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.match_polarisations_bg">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">match_polarisations_bg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.match_polarisations_bg" title="Permalink to this definition">¶</a></dt>
+<dd><p>UNUSED. Identify bg files with different polarisations to signal files.</p>
+<p>e.g. If signal file is in SSP polarisation, then a background file could either be SSP or SSS.</p>
+<p>NOT IMPLEMENTED IN VERSION 1.0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.nm_to_cm">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">nm_to_cm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.nm_to_cm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert data from nanometre to wavenumber.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.nm_to_thz">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">nm_to_thz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.nm_to_thz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert data from nanometre to terahertz.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.open_spe">
+<span class="sig-name descname"><span class="pre">open_spe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.open_spe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open an .spe file and send it to the correct reader method.</p>
+<p>Different spectroscopy cameras read off different versions of the .spe file that is currently used
+a lot (why people don’t just save the spectrum they want as a .txt file, given that this is how 99%
+of spectrscopy is done, is a good question). Andor cameras generally read .spe version 2.5,
+and Princeton Instruments cameras (who maintain the .spe filetype) generally read version 3.0. The
+difference is largely in flexibility and metadata. See the SPE3.0 file format declaration for info
+(online in places).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<em>str</em>) – Name of file to be opened.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Datastore to put the data read from the file into.</p></li>
+<li><p><strong>flag</strong> (<em>str</em>) – Determines whether the data is stored as signal, background, reference, or reference
+background. Possible values “sig”, “bg”, “ref”, “refbg”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.parse_filename">
+<span class="sig-name descname"><span class="pre">parse_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.parse_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the name of file and populate datastore with relevant info.</p>
+<p>Populates various attributes of datastore with helpful info stored in the filename,
+such as polarisation, wavelength, creation time, and index/group. Not required in version 1.0 but
+could be useful later.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>str</em>) – The directory that the files are stored in.</p></li>
+<li><p><strong>file</strong> (<em>str</em>) – The name of the file to be parsed.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – The datastore to populate with the information gained from parsing.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.plot_data">
+<span class="sig-name descname"><span class="pre">plot_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iteration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.plot_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot processed SFG data from datastore to figure.</p>
+<p>Plots data contained in datastore, defaults to plotting normalised and subtracted data if present,
+otherwise subtracted, otherwise plots raw. If custom_region parameters are set in the GUI,
+then it will constrain the x axis to that region and rescale y, otherwise full range is plotted.</p>
+<p>Class attributes are used to determine other parameters that are mostly set by the GUI or plotting
+script.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Contains data to be plotted.</p></li>
+<li><p><strong>iteration</strong> (<em>int</em>) – Current index of file being processed (for batch processing).</p></li>
+<li><p><strong>num_files</strong> (<em>int</em>) – Total number of files to process.</p></li>
+<li><p><strong>figure</strong> (<em>matplotlib.pyplot.figure object</em>) – Figure to plot data on (if stacking).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>figure</strong> – Figure that data was plotted on in the previous iteration.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.pyplot.figure object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.populate_data_stores">
+<span class="sig-name descname"><span class="pre">populate_data_stores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_bg_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.populate_data_stores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populate the SFGDataStore classes in datastores by reading files.</p>
+<p>Reads the data from the .spe file given in the supplied lists and populates the SFGDataStore
+classes accordingly. Uses bool flags from the class attributes to determine what to read.</p>
+<p>The lists are assumed to be ordered, so that the datastore in elemnent [n] of datastores is
+populated using signal data from signal_names[n], background from bg_names[n], and so on. This
+can be sorted manually in the command line, but the match_files method does it automatically for
+the GUI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastores</strong> (<em>list</em>) – Contains empty SFGDataStore class instances to be populated.</p></li>
+<li><p><strong>directory</strong> (<em>str</em>) – Directory that the data files are stored in.</p></li>
+<li><p><strong>signal_names</strong> (<em>list</em>) – Contains filenames of the signal data files to be processed.</p></li>
+<li><p><strong>bg_names</strong> (<em>list</em>) – Contains filenames of the background data files of the signal data files to be processed.</p></li>
+<li><p><strong>ref_names</strong> (<em>list</em>) – Contains filenames of the reference data files to be processed.</p></li>
+<li><p><strong>ref_bg_names</strong> (<em>list</em>) – Contains filenames of the background data files of the reference data files to be processed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.print_attributes">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">print_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.print_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the attributes of datastore attractively.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.process_data">
+<span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downconvert_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalise_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exposure_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibrate_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmic_kill_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process data stored in datastore according to provided check flags.</p>
+<p>Datastore contains SFG data to be processed, and methods of the datastore class are called to
+process the data. Bool flags are used to determine what processing to do. Note that the order in
+which the methods are called is important.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Contains the data to be processed.</p></li>
+<li><p><strong>downconvert_check</strong> (<em>bool</em>) – If true then downconvert the data.</p></li>
+<li><p><strong>subtract_check</strong> (<em>bool</em>) – If true then background subtract the data.</p></li>
+<li><p><strong>normalise_check</strong> (<em>bool</em>) – If true then normalise the data to reference.</p></li>
+<li><p><strong>exposure_check</strong> (<em>bool</em>) – If true then divide all spectra by exposure time.</p></li>
+<li><p><strong>calibrate_check</strong> (<em>bool</em>) – If true then shift data energy axis by provided offset.</p></li>
+<li><p><strong>cosmic_kill_check</strong> (<em>bool</em>) – If true then remove cosmic rays using cosmic_ray_killer().</p></li>
+<li><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional.</em>) – If true then allow data to be (e.g.) downconverted more than once (default False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.process_spe2x">
+<span class="sig-name descname"><span class="pre">process_spe2x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binaryfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.process_spe2x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process data from an SPE 2.x file and put it in the relevant datastore.</p>
+<p>Reads the SPE file at the places defined in the binary header. The output data is in the shape (
+frameheight, framewidth), so is normally (1, n) for a standard spectrum. Extra dimensions are added
+if the full chip is read out, or if there is more than one frame in the SPE file.</p>
+<p><a class="reference external" href="ftp://ftp.piacton.com/Public/Manuals/Princeton%20Instruments/SPE%203.0%20File%20Format%20Specification%20Issue%206%20(4411-0140).pdf">ftp://ftp.piacton.com/Public/Manuals/Princeton%20Instruments/SPE%203.0%20File%20Format%20Specification%20Issue%206%20(4411-0140).pdf</a>
+Most of the options are class attributes and set externally by the GUI and not passed directly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>binaryfile</strong> (<em>binary file object</em>) – The opened .spe file to be processed.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Where the data is stored to.</p></li>
+<li><p><strong>flag</strong> (<em>str</em>) – Determines where in datastore the data is saved. Possible values “sig”, “bg”, “ref”, “refbg”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.process_spe3x">
+<span class="sig-name descname"><span class="pre">process_spe3x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binaryfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.process_spe3x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process data from an SPE 3.0 file and put it in the relevant datastore.</p>
+<p>Reads the SPE file at the places defined in the XML footer. The output data is in the shape (
+frameheight, framewidth), so is normally (1, n) for a standard spectrum. Extra dimensions are added
+if the full chip is read out, or if there is more than one frame in the SPE file.</p>
+<p>Most of the options are class attributes and set externally by the GUI and not passed directly.</p>
+<p><a class="reference external" href="ftp://ftp.piacton.com/Public/Manuals/Princeton%20Instruments/SPE%203.0%20File%20Format%20Specification%20Issue%206%20(4411-0140).pdf">ftp://ftp.piacton.com/Public/Manuals/Princeton%20Instruments/SPE%203.0%20File%20Format%20Specification%20Issue%206%20(4411-0140).pdf</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>binaryfile</strong> (<em>binary file object</em>) – The opened .spe file to be processed.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Where the data is stored to.</p></li>
+<li><p><strong>flag</strong> (<em>str</em>) – Determines where in datastore the data is saved. Possible values “sig”, “bg”, “ref”, “refbg”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.pull_trigger">
+<span class="sig-name descname"><span class="pre">pull_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.pull_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the processing sequence.</p>
+<p>Used mainly in the GUI. When all files are read in and sorted properly, this will create
+datastores, populate datastores, and process all the data using batch_process() according to the
+flags supplied. Parameters are all class attributes.</p>
+<p>The lists containing data files all need to be properly matched and sorted for this to make sense.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.read_at">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">read_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ntype</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.read_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a binary file at a specific position in bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<em>file object</em>) – Opened binary file that you want to read from.</p></li>
+<li><p><strong>pos</strong> (<em>int</em>) – Location (in bytes) to start reading from.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – Number of items after pos to read. -1 reads all items.</p></li>
+<li><p><strong>ntype</strong> (<em>data type</em>) – Data type the binary is encoded in.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data</strong> – The data read from the binary file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ntype</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.read_files">
+<span class="sig-name descname"><span class="pre">read_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.read_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read fname and put the data in the right place in datastore using flag.</p>
+<p>Currently this implementation looks pointless, but it is made so that eventually filetypes other
+than .spe can be read in the same program.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<em>str</em>) – File to be read in.</p></li>
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Datastore to put the data from the file into.</p></li>
+<li><p><strong>flag</strong> (<em>str</em>) – Tells the .spe reader where to put this data in datastore. Options are “sig”, “bg”, “ref”,
+“refbg”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.remove_duplicate_refs">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">remove_duplicate_refs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reftabledata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.remove_duplicate_refs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove duplicate references from the reftabledata.</p>
+<p>Used to stop the GUI showing as many ref files as signal files after matching and sorting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.slice_data">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">slice_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.slice_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slice a data array into a consistent shape.</p>
+<blockquote>
+<div><p>For most cases will slice to an array of dimensions (1, framewidth), but if the binning isnt to
+one pixel then this will become (frameheight, framewidth). Keeping that first dimension for future
+consistency.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Where the framewidth and frameheight are stored for the indexing.</p></li>
+<li><p><strong>data_in</strong> (<em>np array</em>) – 1D array of data read from the data file.</p></li>
+<li><p><strong>data_out</strong> (<em>np array</em>) – (frameheight, framewidth) shaped empty (or zero) array.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data_out</strong> – (frameheight, framewidth) shaped array containing data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.thz_to_cm">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">thz_to_cm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.thz_to_cm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert data from terahertz to wavenumber.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.thz_to_nm">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">thz_to_nm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.thz_to_nm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert data from terahertz to nanometre.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.update_datatable">
+<span class="sig-name descname"><span class="pre">update_datatable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.update_datatable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update data to be shown in the main datatable with current filenames.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.update_reftable">
+<span class="sig-name descname"><span class="pre">update_reftable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remove_duplicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.update_reftable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update data to be shown in the reference datatable with current filenames.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sfgtools.SFGProcessTools.write_data_to_file">
+<span class="sig-name descname"><span class="pre">write_data_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sfgtools.SFGProcessTools.write_data_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data in datastore to a text file in directory.</p>
+<p>Data is written into a text file as columns with a 12 line header explaining what the data is and
+how it has been processed. Nine columns are written with different types of data, but column 0 and
+1 are the ones that contain the useful data in most cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datastore</strong> (<em>SFGDataStore object</em>) – Where the data to be written is stored.</p></li>
+<li><p><strong>directory</strong> (<em>str</em>) – Where the resulting .txt file is to be saved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sfgtools.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">sfgtools module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, jdpicks.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+    </div>
+  </body>
+</html>

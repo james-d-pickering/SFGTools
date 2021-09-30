@@ -980,11 +980,11 @@ class SFGProcessTools:
             datastore.sample = names_nospe[0]
 
         # JDP checks if the penultimate element is numeric, if it is then define this as the group
-        if names_nospe[-2].isnumeric():
+        if len(names_nospe) >= 2 and names_nospe[-2].isnumeric():
             datastore.group = int(names_nospe[-2])
 
         # JDP checks if the final element is numeric, if it is then define this as the index
-        if names_nospe[-1].isnumeric():
+        if len(names_nospe) > 1 and names_nospe[-1].isnumeric():
             datastore.index = int(names_nospe[-1])
 
         # JDP if there is something ending in "nm" then define this as the wavelength.
@@ -1826,7 +1826,6 @@ class SFGProcessTools:
         self.reftabledata = [self.ref_names, self.ref_bg_names, self.ref_num]
         if remove_duplicates:
             self.reftabledata = self.remove_duplicate_refs(self.reftabledata)
-            print(self.reftabledata)
         return
 
     def match_files_with_background(self, filenames, bg_filenames, directory):

@@ -289,8 +289,8 @@ class MainWindowUIClass(QtWidgets.QMainWindow, Ui_MainWindow):
         # err.setStandardButtons(QtWidgets.QMessageBox.Ok)
         # err.setDefaultButton(QtWidgets.QMessageBox.Ok)
         # err.exec_()
-
-        self.model.upconversion_line_num = float(self.model.upconversion_line_num)
+        if not self.model.upconversion_line_num == '':
+            self.model.upconversion_line_num = float(self.model.upconversion_line_num)
         self.initsettings.setValue("last_upconverter", self.model.upconversion_line_num)
 
     @QtCore.pyqtSlot()

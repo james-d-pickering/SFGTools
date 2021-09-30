@@ -1,0 +1,18 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}SFGTools : Processing and Analysing SFG Spectroscopy Data}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Overview}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Scope}{1}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Using SFGTools in a Python Script}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Using SFGTools with a GUI}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Using the Smart File Reader}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Using the Manual File Reader}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Processing Options}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Data Output}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Miscellaneous Notes}{7}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Dependencies}{7}{subsection.2.5.1}%
+\contentsline {subsubsection}{SFGTools}{8}{subsubsection*.2}%
+\contentsline {paragraph}{SFGToolsGUI module}{8}{paragraph*.3}%
+\contentsline {paragraph}{SFGTools\_ui module}{9}{paragraph*.57}%
+\contentsline {paragraph}{sfgtools module}{9}{paragraph*.61}%
+\contentsline {chapter}{\numberline {3}Indices and tables}{23}{chapter.3}%
+\contentsline {chapter}{Python Module Index}{25}{section*.195}%

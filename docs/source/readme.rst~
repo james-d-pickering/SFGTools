@@ -1,0 +1,68 @@
+SFGTools : Processing and Analysing SFG Spectroscopy Data
+===============================================================================
+
+Overview
+----------
+
+**SFGTools** is a Python module designed to facilitate easy processing and analysis of Sum Frequency Generation (SFG) spectroscopy datasets. 
+
+In its current form, it consists of a module containing functions and methods for working with SFG data in a Python script/interpreter, ``sfgtools.py``. Using SFGTools in this way (importing into Python and using in a script) is the most flexible way to use it, and provides the most extended functionality for complex use cases. However, packaged with this module is a graphical frontend made using Qt Designer, ``SFGTools_ui.ui``, which is converted to a Python file, ``SFGTools_ui.py``. This frontend is interfaced with ``sfgtools.py`` via the ``SFGToolsGUI.py`` file, and provides a user-friendly GUI where SFG data can be quickly and easily processed and plotted (as would be useful in a working lab), but without all of the extended functionality of the bare module. 
+
+Scope
+______
+Currently, ``sfgtools`` can be used to process SFG spectra recorded in the *.spe* filetype, which is common in high-sensitivity CCD cameras for spectroscopy. Support is provided for *.spe* version 2.x and 3.0 (commonly produced by Andor and Princeton Instruments cameras respectively). The graphical frontend and plotting capability is currently designed around plotting one-dimensional SFG spectra (where the data on the CCD is binned into one row), but the underlying software supports a wider range of data shapes and formats - they just may not plot correctly when using the GUI. Use of the module in a Python script is advised for this purpose. 
+
+As far as possible, the module has been written to be easily extended, and is well documented. Thus, other data types, data formats, and processing functions can be easily integrated. See REF LATER. 
+
+
+Using SFGTools in a Python Script
+------------------------------------
+
+For ultimate flexibility for future development, the *sfgtools.py* module defines a class ``SFGProcessTools()`` which contains all relevant classes, methods, and attributes for processing SFG data. To load the module in a script, do something like::
+
+        import sfgtools as sfgtools
+        SFGTools = sfgtools.SFGProcessTools()
+
+Here we have imported the module and created ``SFGTools`` as an instance of the ``SFGProcessTools()`` class. 
+
+Now we will load and process some example data to illustrate the module. The example data files and complete script can be found in REF.
+
+First, we define our files to be processed. A publishable SFG spectrum normally consists of a **signal** spectrum that is background subtracted using a **background** spectrum. This subtracted signal spectrum is then normalised by dividing it by a **reference** spectrum, which is itself backgorund subtracted from a **reference background** spectrum. These four names are used extensively in various full and shortened forms throughout the module to denote these different kinds of data. We can load the spectra as follows::
+
+        directory = './examples/'
+        signal = ['signal_example.spe']
+        background = ['background_example.spe']
+        reference = ['reference_example.spe']
+        reference_bg = ['reference_background_example.spe']
+
+Note that we have defined a data directory, ``directory``, and then four appropriately named Python **lists** containing the four raw *.spe* files to be processed. The files could be used as bare strings, but loading them as a list makes it easier to batch process files later on. 
+
+Before we can process these four files, we have to provide some more information to the program about how we want to process our data. In addition to background subtraction and normalisation, SFG spectra are almost always **downconverted**, which means that the spectrum energy axis is lowered in energy such that reflects the vibrational (or electronic, or whatever) response of the molecule. The energy is lowered by the energy of the upconversion beam used in the experiment. Furthermore, the spectra are often **calibrated** by applying a linear offset to the energy axis, to account for any poor calibration of the spectrometer. We have to to tell the program the wavelength of the upconverter, and any calibration shift, and we do this as follows::
+
+        SFGTools.upconversion_line_num = 808
+        SFGTools.calibration_offset = 15
+
+Here we have defined the class attributes ``upconversion_line_num`` and ``calibration_offset``, in nanometres and wavenumbers respectively. See specific documentation for more information. Finally, we have to tell the program that we do want to downconvert, calibrate, background subtract, and normalise our spectrum::
+
+        SFGTools.downconvert_check = True
+        SFGTools.calibrate_check = True
+        SFGTools.subtract_check = True
+        SFGTools.normalise_check = True
+
+Setting these boolean flags will tell the program what to do (there are many other flags, see further documentation). Now we are ready to read our data files, but need to create a place to put the data. To do this we create an ``SFGDataStore`` instance::
+
+        datastore = SFGTools.SFGDataStore()
+
+The instance ``datastore`` of the ``SFGDataStore()`` class will hold our data, together with a large amount of associated metadata if we desire it. Understanding how this class works is central to effectively using (and developing for) this module. The data and metadata are all stored in class attributes, and core processing functions that are applied to the data (such as all of the processes mentioned above) are implemented as methods of this class. You can also create a list of datastore instances for an arbitary number of files by using the function::
+
+      datastores = SFGTools.create_data_stores(len(signal))
+
+Where the length of your *signal* list defines the number of datastores. Each datastore stores the data needed to process one signal file. Now we can load our data into the datastore as follows::  
+
+      SFGTools.read_files( directory+signal[0], datastore, 'sig')
+        SFGTools.read_files( directory+background[0], datastore, 'bg')
+        SFGTools.read_files( directory+reference[0], datastore, 'ref')
+        SFGTools.read_files( directory+reference_bg[0], datastore, 'refbg')
+
+
+ 

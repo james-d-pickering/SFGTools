@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>SFGTools : Processing and Analysing SFG Spectroscopy Data &#8212; SFGTools 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SFGTools : Processing and Analysing SFG Spectroscopy Data</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sfgtools-processing-and-analysing-sfg-spectroscopy-data">
+<h1>SFGTools : Processing and Analysing SFG Spectroscopy Data<a class="headerlink" href="#sfgtools-processing-and-analysing-sfg-spectroscopy-data" title="Permalink to this headline">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>SFGTools</strong> is a Python module designed to facilitate easy processing and analysis of Sum Frequency Generation (SFG) spectroscopy datasets.</p>
+<p>In its current form, it consists of a module containing functions and methods for working with SFG data in a Python script/interpreter, <code class="docutils literal notranslate"><span class="pre">sfgtools.py</span></code>. Using SFGTools in this way (importing into Python and using in a script) is the most flexible way to use it, and provides the most extended functionality for complex use cases. However, packaged with this module is a graphical frontend made using Qt Designer, <code class="docutils literal notranslate"><span class="pre">SFGTools_ui.ui</span></code>, which is converted to a Python file, <code class="docutils literal notranslate"><span class="pre">SFGTools_ui.py</span></code>. This frontend is interfaced with <code class="docutils literal notranslate"><span class="pre">sfgtools.py</span></code> via the <code class="docutils literal notranslate"><span class="pre">SFGToolsGUI.py</span></code> file, and provides a user-friendly GUI where SFG data can be quickly and easily processed and plotted (as would be useful in a working lab), but without all of the extended functionality of the bare module.</p>
+<section id="scope">
+<h3>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h3>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">sfgtools</span></code> can be used to process SFG spectra recorded in the <em>.spe</em> filetype, which is common in high-sensitivity CCD cameras for spectroscopy. Support is provided for <em>.spe</em> version 2.x and 3.0 (commonly produced by Andor and Princeton Instruments cameras respectively). The graphical frontend and plotting capability is currently designed around plotting one-dimensional SFG spectra (where the data on the CCD is binned into one row), but the underlying software supports a wider range of data shapes and formats - they just may not plot correctly when using the GUI. Use of the module in a Python script is advised for this purpose.</p>
+<p>As far as possible, the module has been written to be easily extended, and is well documented. Thus, other data types, data formats, and processing functions can be easily integrated. See REF LATER.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SFGTools : Processing and Analysing SFG Spectroscopy Data</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#scope">Scope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/readme.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SFGTools : Processing and Analysing SFG Spectroscopy Data</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, jdpicks.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>

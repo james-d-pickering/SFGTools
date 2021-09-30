@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Using SFGTools in a Python Script &#8212; SFGTools 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using SFGTools in a Python Script</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="using-sfgtools-in-a-python-script">
+<h1>Using SFGTools in a Python Script<a class="headerlink" href="#using-sfgtools-in-a-python-script" title="Permalink to this headline">¶</a></h1>
+<p>For ultimate flexibility for future development, the <em>sfgtools.py</em> module defines a class <code class="docutils literal notranslate"><span class="pre">SFGProcessTools()</span></code> which contains all relevant classes, methods, and attributes for processing SFG data. To load the module in a script, do something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sfgtools</span> <span class="k">as</span> <span class="nn">sfgtools</span>
+<span class="n">SFGTools</span> <span class="o">=</span> <span class="n">sfgtools</span><span class="o">.</span><span class="n">SFGProcessTools</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Here we have imported the module and created <code class="docutils literal notranslate"><span class="pre">SFGTools</span></code> as an instance of the <code class="docutils literal notranslate"><span class="pre">SFGProcessTools()</span></code> class.</p>
+<p>Now we will load and process some example data to illustrate the module. The example data files and complete script can be found in REF.</p>
+<p>First, we define our files to be processed. A publishable SFG spectrum normally consists of a <strong>signal</strong> spectrum that is background subtracted using a <strong>background</strong> spectrum. This subtracted signal spectrum is then normalised by dividing it by a <strong>reference</strong> spectrum, which is itself backgorund subtracted from a <strong>reference background</strong> spectrum. These four names are used extensively in various full and shortened forms throughout the module to denote these different kinds of data. We can load the spectra as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;./examples/&#39;</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;signal_example.spe&#39;</span><span class="p">]</span>
+<span class="n">background</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;background_example.spe&#39;</span><span class="p">]</span>
+<span class="n">reference</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;reference_example.spe&#39;</span><span class="p">]</span>
+<span class="n">reference_bg</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;reference_background_example.spe&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that we have defined a data directory, <code class="docutils literal notranslate"><span class="pre">directory</span></code>, and then four appropriately named Python <strong>lists</strong> containing the four raw <em>.spe</em> files to be processed. The files could be used as bare strings, but loading them as a list makes it easier to batch process files later on.</p>
+<p>Before we can process these four files, we have to provide some more information to the program about how we want to process our data. In addition to background subtraction and normalisation, SFG spectra are almost always <strong>downconverted</strong>, which means that the spectrum energy axis is lowered in energy such that reflects the vibrational (or electronic, or whatever) response of the molecule. The energy is lowered by the energy of the upconversion beam used in the experiment. Furthermore, the spectra are often <strong>calibrated</strong> by applying a linear offset to the energy axis, to account for any poor calibration of the spectrometer. We have to to tell the program the wavelength of the upconverter, and any calibration shift, and we do this as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">upconversion_line_num</span> <span class="o">=</span> <span class="mi">808</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">calibration_offset</span> <span class="o">=</span> <span class="mi">15</span>
+</pre></div>
+</div>
+<p>Here we have defined the class attributes <code class="docutils literal notranslate"><span class="pre">upconversion_line_num</span></code> and <code class="docutils literal notranslate"><span class="pre">calibration_offset</span></code>, in nanometres and wavenumbers respectively. See specific documentation for more information. Finally, we have to tell the program that we do want to downconvert, calibrate, background subtract, and normalise our spectrum. We also want to correct the spectra for exposure time differences (so subtracting them from each other makes sense), and we might want to remove contributions from cosmic rays (but not needed in this example):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">downconvert_check</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">calibrate_check</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">subtract_check</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">normalise_check</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">exposure_check</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">cosmic_kill_check</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>Setting these boolean flags will tell the program what to do (there are many other flags, see further documentation). Now we are ready to read our data files, but need to create a place to put the data. To do this we create an <code class="docutils literal notranslate"><span class="pre">SFGDataStore</span></code> instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datastore</span> <span class="o">=</span> <span class="n">SFGTools</span><span class="o">.</span><span class="n">SFGDataStore</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The instance <code class="docutils literal notranslate"><span class="pre">datastore</span></code> of the <code class="docutils literal notranslate"><span class="pre">SFGDataStore()</span></code> class will hold our data, together with a large amount of associated metadata if we desire it. Understanding how this class works is central to effectively using (and developing for) this module. The data and metadata are all stored in class attributes, and core processing functions that are applied to the data (such as all of the processes mentioned above) are implemented as methods of this class. You can also create a list of datastore instances for an arbitary number of files by using the function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datastores</span> <span class="o">=</span> <span class="n">SFGTools</span><span class="o">.</span><span class="n">create_data_stores</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">signal</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Where the length of your <em>signal</em> list defines the number of datastores. Now we can load our data into the datastores as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span> <span class="n">directory</span><span class="o">+</span><span class="n">signal</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">datastore</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">)</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span> <span class="n">directory</span><span class="o">+</span><span class="n">background</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">datastore</span><span class="p">,</span> <span class="s1">&#39;bg&#39;</span><span class="p">)</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span> <span class="n">directory</span><span class="o">+</span><span class="n">reference</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">datastore</span><span class="p">,</span> <span class="s1">&#39;ref&#39;</span><span class="p">)</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">read_files</span><span class="p">(</span> <span class="n">directory</span><span class="o">+</span><span class="n">reference_bg</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">datastore</span><span class="p">,</span> <span class="s1">&#39;refbg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">read_files()</span></code> takes the path to the datafile as the first argument, then the <code class="docutils literal notranslate"><span class="pre">SFGDataStore</span></code> instance to store the data in, and finally a string that determines whether the loaded file is marked as a signal (<em>‘sig’</em>), background (<em>‘bg’</em>), reference (<em>‘ref’</em>), or reference background (<em>‘refbg’</em>) file. This ensures that the data is put in the right place for further processing. If you have a list of datastores, or simply want to avoid writing this out, you can also call the function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">populate_data_stores</span><span class="p">(</span><span class="n">datastores</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">reference</span><span class="p">,</span> <span class="n">reference_bg</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See further documentation for more information. Note that some parameters such as the exposure time and spectrum dimensions are automatically extracted from the <em>.spe</em> file, but others can either be added manually, or by using other functions provided in the module. If we wanted to look at our imported data, we can simply look at some of the attributes of datastore - perhaps we want to look at the raw signal data, then type into the Python shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datastore</span><span class="o">.</span><span class="n">signal_raw</span>
+</pre></div>
+</div>
+<p>And you should see a <strong>numpy array</strong> object outputted. All the data are stored as numpy arrays, with a shape of <em>(frameheight, framewidth)</em>, where frameheight and framewidth refer to the height and width of the data read from the <em>.spe</em> file. In general, this array will then have a shape of <em>(1, n)</em> where <em>n</em> is the width of the spectrum. The additional dimension is preserved such that reading without binning the CCD chip is possible. Similarly, we can look at the energy axis:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datastore</span><span class="o">.</span><span class="n">xaxis</span>
+</pre></div>
+</div>
+<p>This is also a numpy array, but is now one dimensional, as the energy axis will never have two dimensions. All attributes of the datastore can be printed to the shell using the <code class="docutils literal notranslate"><span class="pre">print_attributes()</span></code> method. Anyway, let us now proceed with processing our data, which we can do as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">process_data</span><span class="p">(</span><span class="n">datastore</span><span class="p">,</span> <span class="n">SFGTools</span><span class="o">.</span><span class="n">downconvert_check</span><span class="p">,</span> <span class="n">SFGTools</span><span class="o">.</span><span class="n">subtract_check</span><span class="p">,</span>
+                      <span class="n">SFGTools</span><span class="o">.</span><span class="n">normalise_check</span><span class="p">,</span> <span class="n">SFGTools</span><span class="o">.</span><span class="n">exposure_check</span><span class="p">,</span>
+                      <span class="n">SFGTools</span><span class="o">.</span><span class="n">calibrate_check</span><span class="p">,</span> <span class="n">SFGTools</span><span class="o">.</span><span class="n">cosmic_kill_check</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">process_data</span></code> method takes the populated datastore and all our flags as arguments. Under the bonnet, this is calling the appropriate methods of the <code class="docutils literal notranslate"><span class="pre">SFGDataStore</span></code> class (see further documentation). If you have multiple datastores in a list, you can batch process as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">batch_process</span><span class="p">(</span><span class="n">datastores</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This doesn’t take all the flag arguments and inherits them from the class. The reason for this is that sometimes it is desirable to process the same data with or without certain kinds of processing, and the <code class="docutils literal notranslate"><span class="pre">process_data()</span></code> method makes this easier. The <code class="docutils literal notranslate"><span class="pre">batch_process()</span></code> method is mainly intended for use with the GUI frontend for this module.</p>
+<p>Now we have the data processed, we can use our preferred plotting program to look at it, I like matplotlib, so something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">datastore</span><span class="o">.</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">datastore</span><span class="o">.</span><span class="n">signal_normalised</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Will show us the data. You can also apply whatever processing you want to do to the data (fitting etc..) to the processed data. Alternatively, if we have already imported matplotlib, we can use plot our data using functions in the module. These are again mostly intended for use with the GUI, so have some additional arguments which need not worry us here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SFGTools</span><span class="o">.</span><span class="n">custom_region_start</span> <span class="o">=</span> <span class="mi">2800</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">custom_region_end</span> <span class="o">=</span> <span class="mi">3100</span>
+<span class="n">SFGTools</span><span class="o">.</span><span class="n">plot_data</span><span class="p">(</span><span class="n">datastore</span><span class="p">,</span> <span class="n">iteration</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_files</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we have defined two new class attributes which plot the interesting range of our data. The <em>iteration</em> and <em>num_files</em> variables are used to control plotting in the GUI.</p>
+<p>There you go! You have processed and plotted some SFG data using the <code class="docutils literal notranslate"><span class="pre">sfgtools</span></code> module! Please explore the rest of the documentation to see what other methods are available (there are many), and do not be shy about hacking apart the code and bending it to your will.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/using_script.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SFGTools 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using SFGTools in a Python Script</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, jdpicks.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>
